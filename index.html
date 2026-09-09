@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Nanobioanalytical Lab | The Chapman Group</title>
+
+  <meta name="description"
+        content="The Nanobioanalytical Lab, The Chapman Group. Research in analytical chemistry, spectroscopy, chemometrics, artificial intelligence, materials and environmental analysis.">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behaviour: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #06111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(6, 17, 31, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-main {
+      font-size: 20px;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: #77d7ee;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #d9e8ef;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #69d8ef;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 35%, rgba(0,180,220,0.18), transparent 30%),
+        radial-gradient(circle at 20% 70%, rgba(20,100,170,0.18), transparent 35%),
+        linear-gradient(135deg, #06111f 0%, #091d32 60%, #062536 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      right: -140px;
+      top: 60px;
+      border: 1px solid rgba(97,219,240,0.18);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 70px rgba(97,219,240,0.025),
+        0 0 0 140px rgba(97,219,240,0.02);
+    }
+
+    .hero-inner {
+      max-width: 1250px;
+      width: 100%;
+      margin: auto;
+      padding: 90px 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: #71dbee;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: 0.98;
+      max-width: 900px;
+      letter-spacing: -3px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 21px;
+      color: #c9dce4;
+      margin-bottom: 38px;
+      line-height: 1.7;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .button-primary {
+      padding: 15px 24px;
+      border-radius: 7px;
+      background: #67d8eb;
+      color: #06111f;
+      font-weight: 700;
+    }
+
+    .button-secondary {
+      padding: 14px 24px;
+      border-radius: 7px;
+      border: 1px solid rgba(255,255,255,0.28);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: #8ce6f4;
+    }
+
+    .button-secondary:hover {
+      border-color: #67d8eb;
+      color: #67d8eb;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 28px;
+    }
+
+    .container {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #67d8eb;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 52px);
+      margin-bottom: 22px;
+      line-height: 1.1;
+    }
+
+    .section-intro {
+      max-width: 800px;
+      color: #aebfc8;
+      font-size: 18px;
+      margin-bottom: 55px;
+    }
+
+    /* RESEARCH CARDS */
+
+    .research {
+      background: #081827;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #0d2236;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 30px;
+      min-height: 280px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(103,216,235,0.55);
+      background: #10293f;
+    }
+
+    .card-number {
+      color: #67d8eb;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #aebfc8;
+      font-size: 15px;
+    }
+
+    /* APPROACH */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .approach-panel {
+      border: 1px solid rgba(103,216,235,0.23);
+      border-radius: 14px;
+      padding: 40px;
+      background:
+        linear-gradient(145deg, rgba(12,45,65,0.8), rgba(5,20,34,0.9));
+    }
+
+    .workflow {
+      display: grid;
+      gap: 16px;
+    }
+
+    .workflow-item {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 16px;
+    }
+
+    .workflow-item:last-child {
+      border-bottom: none;
+    }
+
+    .workflow-number {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 50%;
+      background: rgba(103,216,235,0.14);
+      border: 1px solid rgba(103,216,235,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #67d8eb;
+    }
+
+    .workflow-item span {
+      color: #d3e0e5;
+    }
+
+    /* OPPORTUNITIES */
+
+    .join {
+      background:
+        radial-gradient(circle at 20% 50%, rgba(60,190,220,0.12), transparent 30%),
+        #081827;
+    }
+
+    .join-box {
+      max-width: 950px;
+      padding: 55px;
+      border-radius: 16px;
+      border: 1px solid rgba(103,216,235,0.25);
+      background: rgba(8,30,48,0.8);
+    }
+
+    .join-box p {
+      color: #b8c9d1;
+      font-size: 18px;
+      max-width: 750px;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 50px 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: #040c15;
+    }
+
+    .footer-inner {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .footer-text {
+      color: #849ba6;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 950px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 620px) {
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      .join-box {
+        padding: 30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <div class="brand">
+      <div class="brand-main">THE NANOBIOANALYTICAL LAB</div>
+      <div class="brand-sub">The Chapman Group</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#join">Join Us</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="eyebrow">
+        Analytical Chemistry · Spectroscopy · AI
+      </div>
+
+      <h1>
+        Chemical information from complex systems.
+      </h1>
+
+      <p class="hero-text">
+        The Nanobioanalytical Lab develops advanced analytical approaches
+        combining spectroscopy, chemometrics, artificial intelligence and
+        materials science to understand complex chemical systems and generate
+        robust analytical evidence.
+      </p>
+
+      <div class="buttons">
+
+        <a class="button-primary" href="#research">
+          Explore our research
+        </a>
+
+        <a class="button-secondary" href="#join">
+          Work with us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="research" id="research">
+
+    <div class="container">
+
+      <div class="section-label">
+        Research
+      </div>
+
+      <h2>
+        Analytical science across scales.
+      </h2>
+
+      <p class="section-intro">
+        Our research spans molecular measurement, spectral fingerprinting,
+        advanced materials, environmental analysis and data-driven analytical
+        chemistry.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="card-number">01</div>
+
+          <h3>
+            Spectroscopy + AI
+          </h3>
+
+          <p>
+            Combining vibrational and optical spectroscopy with chemometrics
+            and machine learning for rapid chemical identification,
+            classification and quantification.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">02</div>
+
+          <h3>
+            Chemical Fingerprinting
+          </h3>
+
+          <p>
+            Developing spectral fingerprints and orthogonal analytical
+            evidence for authentication, provenance, quality assurance and
+            chemical characterisation.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">03</div>
+
+          <h3>
+            Environmental Analysis
+          </h3>
+
+          <p>
+            Developing analytical strategies for microplastics,
+            contaminants and chemically complex environmental matrices.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">04</div>
+
+          <h3>
+            Nanobioanalytical Materials
+          </h3>
+
+          <p>
+            Investigating functional and antimicrobial materials at the
+            interface of chemistry, nanotechnology, biology and analytical
+            measurement.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="approach">
+
+    <div class="container">
+
+      <div class="approach-grid">
+
+        <div>
+
+          <div class="section-label">
+            Our Approach
+          </div>
+
+          <h2>
+            From measurement to evidence.
+          </h2>
+
+          <p class="section-intro">
+            Analytical signals are only useful when they generate chemically
+            meaningful, reproducible and defensible information. We combine
+            instrumental measurement with quantitative analysis, validation
+            and data science to translate complex signals into evidence.
+          </p>
+
+        </div>
+
+
+        <div class="approach-panel">
+
+          <div class="workflow">
+
+            <div class="workflow-item">
+              <div class="workflow-number">1</div>
+              <span>Define the analytical question</span>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-number">2</div>
+              <span>Acquire robust chemical measurements</span>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-number">3</div>
+              <span>Extract informative spectral features</span>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-number">4</div>
+              <span>Apply chemometrics and machine learning</span>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-number">5</div>
+              <span>Validate with orthogonal analytical evidence</span>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-number">6</div>
+              <span>Translate measurement into decision-making</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="join" id="join">
+
+    <div class="container">
+
+      <div class="join-box">
+
+        <div class="section-label">
+          Opportunities
+        </div>
+
+        <h2>
+          Join The Chapman Group
+        </h2>
+
+        <p>
+          We welcome enquiries from prospective Honours and PhD researchers,
+          visiting scientists, academic collaborators and industry partners
+          interested in spectroscopy, chemometrics, environmental analysis,
+          functional materials and data-driven analytical chemistry.
+        </p>
+
+        <a class="button-primary" href="mailto:">
+          Contact the group
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-title">
+        The Nanobioanalytical Lab
+      </div>
+
+      <div class="footer-text">
+        The Chapman Group
+      </div>
+
+    </div>
+
+    <div class="footer-text">
+      Analytical Chemistry · Griffith University · Australia
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
