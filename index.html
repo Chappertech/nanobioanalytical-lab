@@ -9,7 +9,7 @@
 <title>The Nanobioanalytical Lab | The Chapman Group</title>
 
 <meta name="description"
-content="The Nanobioanalytical Lab at Griffith University. Research in analytical chemistry, spectroscopy, artificial intelligence, chemometrics, circular materials, emerging pharmaceuticals and functional materials.">
+content="The Nanobioanalytical Lab at Griffith University. Research in analytical chemistry, spectroscopy, chemometrics, artificial intelligence, circular materials, pharmaceuticals, antimicrobial materials and rapid diagnostics.">
 
 <style>
 
@@ -42,7 +42,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(4, 14, 26, 0.97);
+    background: rgba(4,14,26,0.97);
     border-bottom: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
 }
@@ -55,11 +55,6 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
 }
 
 .logo img {
@@ -168,6 +163,7 @@ h1 {
 }
 
 .button-primary {
+    display: inline-block;
     padding: 15px 25px;
     border-radius: 7px;
     background: #67d8eb;
@@ -180,6 +176,7 @@ h1 {
 }
 
 .button-secondary {
+    display: inline-block;
     padding: 14px 25px;
     border-radius: 7px;
     border: 1px solid rgba(255,255,255,0.30);
@@ -248,7 +245,6 @@ h2 {
     border-radius: 14px;
     padding: 36px;
     min-height: 310px;
-
     transition: 0.25s;
 }
 
@@ -291,11 +287,9 @@ h2 {
 .capability {
     padding: 23px 15px;
     text-align: center;
-
     background: rgba(11,37,56,0.72);
     border: 1px solid rgba(103,216,235,0.20);
     border-radius: 9px;
-
     color: #d6e5ea;
     font-size: 14px;
 }
@@ -321,9 +315,7 @@ h2 {
 
 .application-card {
     padding: 32px;
-
     background: rgba(7,28,45,0.85);
-
     border-left: 2px solid #67d8eb;
 }
 
@@ -344,35 +336,132 @@ h2 {
     background: #06111f;
 }
 
+.people-heading {
+    margin-top: 65px;
+    margin-bottom: 25px;
+    color: #67d8eb;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.people-heading:first-of-type {
+    margin-top: 0;
+}
+
 .people-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
-.person {
-    padding: 28px;
-
+.person-card {
+    overflow: hidden;
     background: #0c2032;
-
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 11px;
-
-    transition: 0.2s;
+    border-radius: 13px;
+    transition: 0.25s;
 }
 
-.person:hover {
-    border-color: rgba(103,216,235,0.45);
+.person-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(103,216,235,0.48);
+}
+
+.person-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    background: #0a1928;
+}
+
+.person-content {
+    padding: 25px;
 }
 
 .person-name {
-    font-size: 20px;
-    margin-bottom: 6px;
+    font-size: 22px;
+    margin-bottom: 4px;
 }
 
 .person-role {
     color: #67d8eb;
     font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.person-project {
+    color: #c3d2d9;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.person-themes {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.theme-pill {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: rgba(103,216,235,0.09);
+    border: 1px solid rgba(103,216,235,0.20);
+    color: #8de1ef;
+    font-size: 11px;
+}
+
+
+/* SILHOUETTE */
+
+.silhouette {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 35%,
+        rgba(103,216,235,0.12),
+        transparent 30%),
+        linear-gradient(
+        145deg,
+        #10283b,
+        #081827
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.silhouette-person {
+    position: relative;
+    width: 150px;
+    height: 190px;
+}
+
+.silhouette-head {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    left: 36px;
+    top: 8px;
+    background: #355268;
+}
+
+.silhouette-body {
+    position: absolute;
+    width: 150px;
+    height: 105px;
+    border-radius: 80px 80px 15px 15px;
+    left: 0;
+    bottom: 0;
+    background: #355268;
 }
 
 
@@ -391,9 +480,7 @@ h2 {
 
 .workflow {
     padding: 40px;
-
     border-radius: 14px;
-
     border: 1px solid rgba(103,216,235,0.23);
 
     background:
@@ -408,9 +495,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 18px;
-
     padding: 16px 0;
-
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -428,11 +513,8 @@ h2 {
     justify-content: center;
 
     border-radius: 50%;
-
     color: #67d8eb;
-
     border: 1px solid rgba(103,216,235,0.40);
-
     background: rgba(103,216,235,0.12);
 }
 
@@ -452,21 +534,15 @@ h2 {
 .join-box {
     max-width: 950px;
     padding: 55px;
-
     border-radius: 16px;
-
     border: 1px solid rgba(103,216,235,0.25);
-
     background: rgba(8,30,48,0.84);
 }
 
 .join-box p {
     max-width: 760px;
-
     color: #b8c9d1;
-
     font-size: 18px;
-
     margin-bottom: 30px;
 }
 
@@ -475,16 +551,13 @@ h2 {
 
 footer {
     background: #040c15;
-
     border-top: 1px solid rgba(255,255,255,0.08);
-
     padding: 45px 28px;
 }
 
 .footer-inner {
     max-width: 1320px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -501,7 +574,7 @@ footer {
 }
 
 
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:1000px) {
 
@@ -530,6 +603,9 @@ footer {
     }
 
 }
+
+
+/* MOBILE */
 
 @media(max-width:700px) {
 
@@ -574,9 +650,13 @@ footer {
 
 <div class="logo">
 
+<a href="#top">
+
 <img
 src="Nanobioanal%20logo.png"
 alt="The Nanobioanalytical Lab, The Chapman Group">
+
+</a>
 
 </div>
 
@@ -586,13 +666,9 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 <ul>
 
 <li><a href="#research">Research</a></li>
-
 <li><a href="#capabilities">Capabilities</a></li>
-
 <li><a href="#people">People</a></li>
-
 <li><a href="#approach">Approach</a></li>
-
 <li><a href="#join">Join Us</a></li>
 
 </ul>
@@ -605,7 +681,7 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 
 
 
-<main>
+<main id="top">
 
 
 <section class="hero">
@@ -663,7 +739,6 @@ Meet the group
 
 <div class="container">
 
-
 <div class="section-label">
 
 Research Programmes
@@ -685,7 +760,6 @@ developing faster, more informative and more accessible analytical
 methods for chemically complex systems.
 
 </p>
-
 
 
 <div class="research-grid">
@@ -815,23 +889,16 @@ chemometrics, machine learning and rigorous validation.
 </p>
 
 
-
 <div class="capability-grid">
 
 <div class="capability">NIR Spectroscopy</div>
-
 <div class="capability">FTIR Spectroscopy</div>
-
 <div class="capability">Hyperspectral Imaging</div>
-
 <div class="capability">Chromatography</div>
 
 <div class="capability">Mass Spectrometry</div>
-
 <div class="capability">Chemometrics</div>
-
 <div class="capability">Machine Learning</div>
-
 <div class="capability">Chemical Fingerprinting</div>
 
 </div>
@@ -859,7 +926,6 @@ Strategic Applications
 Translating analytical science into real-world decisions.
 
 </h2>
-
 
 
 <div class="application-grid">
@@ -953,18 +1019,40 @@ The Chapman Group
 
 <p class="section-intro">
 
-Our researchers work across analytical chemistry, spectroscopy,
-materials science, environmental analysis and data-driven chemical
-measurement.
+Our researchers span analytical chemistry, spectroscopy, chemometrics,
+artificial intelligence, polymer science, antimicrobial materials,
+forensic chemistry and biomedical analysis.
 
 </p>
 
 
 
+<div class="people-heading">
+
+Group Leader
+
+</div>
+
+
 <div class="people-grid">
 
 
-<div class="person">
+<div class="person-card">
+
+<div class="silhouette">
+
+<div class="silhouette-person">
+
+<div class="silhouette-head"></div>
+
+<div class="silhouette-body"></div>
+
+</div>
+
+</div>
+
+
+<div class="person-content">
 
 <div class="person-name">
 
@@ -978,78 +1066,58 @@ Group Leader
 
 </div>
 
-</div>
+<div class="person-project">
 
-
-<div class="person">
-
-<div class="person-name">
-
-Chamodi Premasinghe
-
-</div>
-
-<div class="person-role">
-
-Researcher
-
-</div>
+Analytical chemistry, spectroscopy, chemometrics, artificial intelligence,
+advanced materials and translational analytical science.
 
 </div>
 
 
-<div class="person">
+<div class="person-themes">
 
-<div class="person-name">
-
-Chloe Broeckelman
+<span class="theme-pill">Cross-programme</span>
+<span class="theme-pill">Analytical Chemistry</span>
+<span class="theme-pill">AI + Spectroscopy</span>
 
 </div>
-
-<div class="person-role">
-
-Researcher
 
 </div>
 
 </div>
 
 
-<div class="person">
-
-<div class="person-name">
-
-Adam Kolobaric
-
 </div>
 
-<div class="person-role">
 
-Researcher
 
-</div>
+<div class="people-heading">
+
+Postdoctoral Research Fellow
 
 </div>
 
 
-<div class="person">
+<div class="people-grid">
 
-<div class="person-name">
 
-William Marron
+<div class="person-card">
 
-</div>
 
-<div class="person-role">
+<div class="silhouette">
 
-Researcher
+<div class="silhouette-person">
+
+<div class="silhouette-head"></div>
+
+<div class="silhouette-body"></div>
 
 </div>
 
 </div>
 
 
-<div class="person">
+<div class="person-content">
 
 <div class="person-name">
 
@@ -1059,14 +1127,364 @@ Abid Farooq
 
 <div class="person-role">
 
-Researcher
+Postdoctoral Research Fellow
+
+</div>
+
+<div class="person-project">
+
+Cross-programme research coordination and project oversight across
+rapid analytical diagnostics, spectroscopy, chemometrics, circular
+materials and emerging analytical applications.
+
+</div>
+
+
+<div class="person-themes">
+
+<span class="theme-pill">Cross-programme</span>
+<span class="theme-pill">Project Integration</span>
+<span class="theme-pill">Analytical Chemistry</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="people-heading">
+
+PhD Researchers
+
+</div>
+
+
+<div class="people-grid">
+
+
+<div class="person-card">
+
+<img
+class="person-image"
+src="images/Chamodi.jpeg"
+alt="Chamodi Premasinghe">
+
+<div class="person-content">
+
+<div class="person-name">
+
+Chamodi Premasinghe
+
+</div>
+
+<div class="person-role">
+
+PhD Researcher
+
+</div>
+
+<div class="person-project">
+
+Development and Characterisation of Novel Antimicrobial Materials for
+Hospital Applications Using a Diabetic Foot Ulcer Biofilm Model
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Antimicrobial Materials</span>
+<span class="theme-pill">Biointerfaces</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="person-card">
+
+<img
+class="person-image"
+src="images/chloe.jpg"
+alt="Chloe Broeckelman">
+
+<div class="person-content">
+
+<div class="person-name">
+
+Chloe Broeckelman
+
+</div>
+
+<div class="person-role">
+
+PhD Researcher
+
+</div>
+
+<div class="person-project">
+
+Rapid Spectroscopic Characterisation of Medical Plastic Waste for
+Polymer Identification, Contamination Assessment and Circular-Economy Recovery
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Circular Materials</span>
+<span class="theme-pill">Rapid Diagnostics</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="person-card">
+
+<img
+class="person-image"
+src="images/Adam.jpg"
+alt="Adam Kolobaric">
+
+<div class="person-content">
+
+<div class="person-name">
+
+Adam Kolobaric
+
+</div>
+
+<div class="person-role">
+
+PhD Researcher
+
+</div>
+
+<div class="person-project">
+
+Rapid Spectroscopic Detection and Characterisation of Microplastics,
+Nanoplastics and Associated Chemical Additives in Food-Waste Matrices
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Microplastics</span>
+<span class="theme-pill">Rapid Diagnostics</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="person-card">
+
+
+<div class="silhouette">
+
+<div class="silhouette-person">
+
+<div class="silhouette-head"></div>
+
+<div class="silhouette-body"></div>
 
 </div>
 
 </div>
 
 
+<div class="person-content">
+
+<div class="person-name">
+
+William Marron
+
 </div>
+
+<div class="person-role">
+
+PhD Researcher
+
+</div>
+
+<div class="person-project">
+
+Spectroscopic and Chemometric Characterisation of Complex Beer Matrices
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Spectroscopy</span>
+<span class="theme-pill">Chemometrics</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="people-heading">
+
+Honours Researchers
+
+</div>
+
+
+<div class="people-grid">
+
+
+<div class="person-card">
+
+
+<div class="silhouette">
+
+<div class="silhouette-person">
+
+<div class="silhouette-head"></div>
+
+<div class="silhouette-body"></div>
+
+</div>
+
+</div>
+
+
+<div class="person-content">
+
+<div class="person-name">
+
+Brittany De Jong
+
+</div>
+
+<div class="person-role">
+
+Honours Researcher
+
+</div>
+
+<div class="person-project">
+
+Development of Rapid Spectroscopic Biosensing Methods for the Detection
+of Kidney Disease Biomarkers
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Biosensing</span>
+<span class="theme-pill">Rapid Diagnostics</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="person-card">
+
+<img
+class="person-image"
+src="images/Lauren%20Bridger.jpeg"
+alt="Lauren Bridger">
+
+<div class="person-content">
+
+<div class="person-name">
+
+Lauren Bridger
+
+</div>
+
+<div class="person-role">
+
+Honours Researcher
+
+</div>
+
+<div class="person-project">
+
+AI-Enabled Analytical Characterisation of Plastic Recyclates for
+Circular-Economy Applications
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Circular Materials</span>
+<span class="theme-pill">Artificial Intelligence</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="person-card">
+
+<img
+class="person-image"
+src="images/Jacqui.jpg"
+alt="Jacquilyn Wonnocot">
+
+<div class="person-content">
+
+<div class="person-name">
+
+Jacquilyn Wonnocot
+
+</div>
+
+<div class="person-role">
+
+Honours Researcher
+
+</div>
+
+<div class="person-project">
+
+Development of Rapid Spectroscopic Methods for the Forensic Analysis
+and Discrimination of Cosmetic Products
+
+</div>
+
+<div class="person-themes">
+
+<span class="theme-pill">Forensic Chemistry</span>
+<span class="theme-pill">Rapid Diagnostics</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
 
 </div>
 
@@ -1101,10 +1519,10 @@ From measurement to evidence.
 
 <p class="section-intro">
 
-Analytical signals are only valuable when they provide chemically
-meaningful, reproducible and defensible information. We integrate
-instrumental measurement, experimental design, quantitative analysis
-and data science to convert complex chemical signals into evidence.
+Analytical signals are only valuable when they provide chemically meaningful,
+reproducible and defensible information. We integrate instrumental measurement,
+experimental design, quantitative analysis and data science to convert complex
+chemical signals into evidence.
 
 </p>
 
@@ -1206,9 +1624,9 @@ Work with The Chapman Group
 
 We welcome enquiries from prospective Honours and PhD researchers,
 visiting scientists, academic collaborators and industry partners
-interested in analytical chemistry, spectroscopy, artificial
-intelligence, circular materials, pharmaceutical analysis and
-functional materials.
+interested in analytical chemistry, spectroscopy, artificial intelligence,
+circular materials, pharmaceutical analysis, antimicrobial materials
+and functional materials.
 
 </p>
 
