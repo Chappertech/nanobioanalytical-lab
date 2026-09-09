@@ -18,7 +18,7 @@
     }
 
     html {
-      scroll-behaviour: smooth;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -39,7 +39,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(6, 17, 31, 0.94);
+      background: rgba(6, 17, 31, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
@@ -47,19 +47,33 @@
     .nav {
       max-width: 1250px;
       margin: auto;
-      padding: 20px 28px;
+      padding: 14px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 30px;
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand-logo {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
       display: flex;
       flex-direction: column;
     }
 
     .brand-main {
-      font-size: 20px;
+      font-size: 19px;
       letter-spacing: 1.2px;
       font-weight: 700;
     }
@@ -306,7 +320,7 @@
       color: #d3e0e5;
     }
 
-    /* OPPORTUNITIES */
+    /* JOIN */
 
     .join {
       background:
@@ -372,6 +386,11 @@
         grid-template-columns: 1fr;
       }
 
+      .brand-logo {
+        width: 64px;
+        height: 64px;
+      }
+
     }
 
     @media (max-width: 620px) {
@@ -392,6 +411,19 @@
         padding: 30px;
       }
 
+      .brand-main {
+        font-size: 14px;
+      }
+
+      .brand-sub {
+        font-size: 10px;
+      }
+
+      .brand-logo {
+        width: 54px;
+        height: 54px;
+      }
+
     }
 
   </style>
@@ -404,8 +436,18 @@
   <div class="nav">
 
     <div class="brand">
-      <div class="brand-main">THE NANOBIOANALYTICAL LAB</div>
-      <div class="brand-sub">The Chapman Group</div>
+
+      <img
+        src="images/nanobioanalytical-lab-logo.png"
+        alt="The Nanobioanalytical Lab logo"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+        <div class="brand-main">THE NANOBIOANALYTICAL LAB</div>
+        <div class="brand-sub">The Chapman Group</div>
+      </div>
+
     </div>
 
     <nav>
