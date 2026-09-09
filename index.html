@@ -7,7 +7,7 @@
   <title>The Nanobioanalytical Lab | The Chapman Group</title>
 
   <meta name="description"
-        content="The Nanobioanalytical Lab, The Chapman Group. Research in analytical chemistry, spectroscopy, chemometrics, artificial intelligence, materials and environmental analysis.">
+        content="The Nanobioanalytical Lab, The Chapman Group at Griffith University. Research in analytical chemistry, spectroscopy, artificial intelligence, chemometrics, circular materials, emerging pharmaceuticals and functional materials.">
 
   <style>
 
@@ -33,21 +33,21 @@
       color: inherit;
     }
 
-    /* NAVIGATION */
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
       background: rgba(6, 17, 31, 0.96);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav {
-      max-width: 1250px;
+      max-width: 1300px;
       margin: auto;
-      padding: 14px 28px;
+      padding: 12px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -61,8 +61,8 @@
     }
 
     .brand-logo {
-      width: 78px;
-      height: 78px;
+      width: 82px;
+      height: 82px;
       object-fit: contain;
       flex-shrink: 0;
     }
@@ -73,46 +73,46 @@
     }
 
     .brand-main {
-      font-size: 19px;
+      font-size: 18px;
       letter-spacing: 1.2px;
       font-weight: 700;
     }
 
     .brand-sub {
-      font-size: 12px;
-      color: #77d7ee;
-      letter-spacing: 2px;
+      font-size: 11px;
+      color: #71dbee;
+      letter-spacing: 2.3px;
       text-transform: uppercase;
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 28px;
+      gap: 25px;
       font-size: 14px;
     }
 
     nav a {
       color: #d9e8ef;
-      transition: 0.2s;
+      transition: 0.2s ease;
     }
 
     nav a:hover {
-      color: #69d8ef;
+      color: #71dbee;
     }
 
     /* HERO */
 
     .hero {
-      min-height: 86vh;
+      min-height: 84vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 80% 35%, rgba(0,180,220,0.18), transparent 30%),
-        radial-gradient(circle at 20% 70%, rgba(20,100,170,0.18), transparent 35%),
+        radial-gradient(circle at 80% 35%, rgba(0,180,220,0.20), transparent 30%),
+        radial-gradient(circle at 15% 75%, rgba(30,90,170,0.20), transparent 34%),
         linear-gradient(135deg, #06111f 0%, #091d32 60%, #062536 100%);
     }
 
@@ -121,20 +121,20 @@
       position: absolute;
       width: 620px;
       height: 620px;
-      right: -140px;
-      top: 60px;
-      border: 1px solid rgba(97,219,240,0.18);
+      right: -150px;
+      top: 40px;
+      border: 1px solid rgba(103,216,235,0.18);
       border-radius: 50%;
       box-shadow:
-        0 0 0 70px rgba(97,219,240,0.025),
-        0 0 0 140px rgba(97,219,240,0.02);
+        0 0 0 70px rgba(103,216,235,0.025),
+        0 0 0 140px rgba(103,216,235,0.018);
     }
 
     .hero-inner {
-      max-width: 1250px;
+      max-width: 1300px;
       width: 100%;
       margin: auto;
-      padding: 90px 28px;
+      padding: 95px 28px;
       position: relative;
       z-index: 2;
     }
@@ -144,29 +144,29 @@
       text-transform: uppercase;
       letter-spacing: 4px;
       font-size: 13px;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: clamp(48px, 7vw, 88px);
+      font-size: clamp(48px, 7vw, 90px);
       line-height: 0.98;
-      max-width: 900px;
+      max-width: 950px;
       letter-spacing: -3px;
       margin-bottom: 30px;
     }
 
     .hero-text {
-      max-width: 720px;
-      font-size: 21px;
+      max-width: 780px;
+      font-size: 20px;
       color: #c9dce4;
       margin-bottom: 38px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 14px;
     }
 
     .button-primary {
@@ -175,17 +175,19 @@
       background: #67d8eb;
       color: #06111f;
       font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary:hover {
+      background: #91e7f3;
     }
 
     .button-secondary {
       padding: 14px 24px;
       border-radius: 7px;
       border: 1px solid rgba(255,255,255,0.28);
-      color: white;
-    }
-
-    .button-primary:hover {
-      background: #8ce6f4;
+      color: #ffffff;
+      transition: 0.2s ease;
     }
 
     .button-secondary:hover {
@@ -193,14 +195,14 @@
       color: #67d8eb;
     }
 
-    /* SECTIONS */
+    /* GENERAL */
 
     section {
       padding: 100px 28px;
     }
 
     .container {
-      max-width: 1250px;
+      max-width: 1300px;
       margin: auto;
     }
 
@@ -215,17 +217,17 @@
     h2 {
       font-size: clamp(34px, 5vw, 52px);
       margin-bottom: 22px;
-      line-height: 1.1;
+      line-height: 1.08;
     }
 
     .section-intro {
-      max-width: 800px;
+      max-width: 850px;
       color: #aebfc8;
       font-size: 18px;
       margin-bottom: 55px;
     }
 
-    /* RESEARCH CARDS */
+    /* RESEARCH */
 
     .research {
       background: #081827;
@@ -233,47 +235,143 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .card {
-      background: #0d2236;
+      background:
+        linear-gradient(145deg, rgba(15,39,59,0.96), rgba(9,29,46,0.96));
       border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      padding: 30px;
-      min-height: 280px;
+      border-radius: 14px;
+      padding: 34px;
+      min-height: 310px;
       transition: 0.25s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      border-color: rgba(103,216,235,0.55);
-      background: #10293f;
+      border-color: rgba(103,216,235,0.50);
+      background:
+        linear-gradient(145deg, rgba(18,49,72,0.98), rgba(10,34,53,0.98));
     }
 
     .card-number {
       color: #67d8eb;
-      font-size: 13px;
-      letter-spacing: 2px;
-      margin-bottom: 35px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 32px;
     }
 
     .card h3 {
-      font-size: 22px;
-      margin-bottom: 14px;
+      font-size: 25px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      max-width: 500px;
     }
 
     .card p {
       color: #aebfc8;
       font-size: 15px;
+      max-width: 560px;
+    }
+
+    /* ANALYTICAL PLATFORM */
+
+    .platform {
+      background: #06111f;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .platform-item {
+      padding: 22px 18px;
+      text-align: center;
+      border-radius: 9px;
+      border: 1px solid rgba(103,216,235,0.20);
+      background: rgba(11,37,56,0.70);
+      color: #d7e6eb;
+      font-size: 14px;
+    }
+
+    /* STRATEGIC APPLICATIONS */
+
+    .applications {
+      background:
+        radial-gradient(circle at 80% 15%, rgba(0,170,220,0.10), transparent 30%),
+        #081827;
+    }
+
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .application-card {
+      padding: 30px;
+      border-left: 2px solid #67d8eb;
+      background: rgba(8,29,46,0.82);
+    }
+
+    .application-card h3 {
+      font-size: 21px;
+      margin-bottom: 14px;
+    }
+
+    .application-card p {
+      color: #aebfc8;
+      font-size: 15px;
+    }
+
+    /* PEOPLE */
+
+    .people {
+      background: #06111f;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .person {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #0c2032;
+      border-radius: 10px;
+      padding: 26px;
+    }
+
+    .person-name {
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .person-role {
+      color: #67d8eb;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .person-text {
+      color: #9fb2bb;
+      font-size: 14px;
     }
 
     /* APPROACH */
 
+    .approach {
+      background: #081827;
+    }
+
     .approach-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 70px;
       align-items: center;
     }
@@ -283,7 +381,7 @@
       border-radius: 14px;
       padding: 40px;
       background:
-        linear-gradient(145deg, rgba(12,45,65,0.8), rgba(5,20,34,0.9));
+        linear-gradient(145deg, rgba(12,45,65,0.82), rgba(5,20,34,0.92));
     }
 
     .workflow {
@@ -309,7 +407,7 @@
       min-width: 40px;
       border-radius: 50%;
       background: rgba(103,216,235,0.14);
-      border: 1px solid rgba(103,216,235,0.4);
+      border: 1px solid rgba(103,216,235,0.40);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -325,7 +423,7 @@
     .join {
       background:
         radial-gradient(circle at 20% 50%, rgba(60,190,220,0.12), transparent 30%),
-        #081827;
+        #06111f;
     }
 
     .join-box {
@@ -333,13 +431,13 @@
       padding: 55px;
       border-radius: 16px;
       border: 1px solid rgba(103,216,235,0.25);
-      background: rgba(8,30,48,0.8);
+      background: rgba(8,30,48,0.84);
     }
 
     .join-box p {
       color: #b8c9d1;
       font-size: 18px;
-      max-width: 750px;
+      max-width: 760px;
       margin-bottom: 30px;
     }
 
@@ -352,7 +450,7 @@
     }
 
     .footer-inner {
-      max-width: 1250px;
+      max-width: 1300px;
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -372,13 +470,21 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 950px) {
+    @media (max-width: 1000px) {
 
       nav ul {
         display: none;
       }
 
-      .cards {
+      .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .application-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .people-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -386,16 +492,19 @@
         grid-template-columns: 1fr;
       }
 
-      .brand-logo {
-        width: 64px;
-        height: 64px;
-      }
-
     }
 
-    @media (max-width: 620px) {
+    @media (max-width: 700px) {
 
       .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .people-grid {
         grid-template-columns: 1fr;
       }
 
@@ -411,23 +520,24 @@
         padding: 30px;
       }
 
+      .brand-logo {
+        width: 58px;
+        height: 58px;
+      }
+
       .brand-main {
         font-size: 14px;
       }
 
       .brand-sub {
-        font-size: 10px;
-      }
-
-      .brand-logo {
-        width: 54px;
-        height: 54px;
+        font-size: 9px;
       }
 
     }
 
   </style>
 </head>
+
 
 <body>
 
@@ -438,8 +548,8 @@
     <div class="brand">
 
       <img
-        src="images/nanobioanalytical-lab-logo.png"
-        alt="The Nanobioanalytical Lab logo"
+        src="images/Nanobioanalytical%20Image.png"
+        alt="The Nanobioanalytical Lab"
         class="brand-logo"
       >
 
@@ -453,9 +563,9 @@
     <nav>
       <ul>
         <li><a href="#research">Research</a></li>
-        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#platform">Capabilities</a></li>
         <li><a href="#people">People</a></li>
-        <li><a href="#publications">Publications</a></li>
+        <li><a href="#approach">Approach</a></li>
         <li><a href="#join">Join Us</a></li>
       </ul>
     </nav>
@@ -472,7 +582,7 @@
     <div class="hero-inner">
 
       <div class="eyebrow">
-        Analytical Chemistry · Spectroscopy · AI
+        Analytical Chemistry · Spectroscopy · Chemometrics · Artificial Intelligence
       </div>
 
       <h1>
@@ -480,10 +590,10 @@
       </h1>
 
       <p class="hero-text">
-        The Nanobioanalytical Lab develops advanced analytical approaches
-        combining spectroscopy, chemometrics, artificial intelligence and
-        materials science to understand complex chemical systems and generate
-        robust analytical evidence.
+        The Nanobioanalytical Lab develops advanced analytical technologies
+        that combine spectroscopy, chemometrics, artificial intelligence and
+        complementary chemical analysis to solve emerging problems across
+        health, materials, environmental science and advanced manufacturing.
       </p>
 
       <div class="buttons">
@@ -492,8 +602,8 @@
           Explore our research
         </a>
 
-        <a class="button-secondary" href="#join">
-          Work with us
+        <a class="button-secondary" href="#people">
+          Meet the group
         </a>
 
       </div>
@@ -508,17 +618,17 @@
     <div class="container">
 
       <div class="section-label">
-        Research
+        Research Programmes
       </div>
 
       <h2>
-        Analytical science across scales.
+        Analytical chemistry for emerging challenges.
       </h2>
 
       <p class="section-intro">
-        Our research spans molecular measurement, spectral fingerprinting,
-        advanced materials, environmental analysis and data-driven analytical
-        chemistry.
+        Our research programmes are connected by a common objective:
+        developing faster, more informative and more accessible analytical
+        methods for chemically complex systems.
       </p>
 
       <div class="cards">
@@ -528,13 +638,13 @@
           <div class="card-number">01</div>
 
           <h3>
-            Spectroscopy + AI
+            AI-Enabled Rapid Analytical Diagnostics
           </h3>
 
           <p>
-            Combining vibrational and optical spectroscopy with chemometrics
-            and machine learning for rapid chemical identification,
-            classification and quantification.
+            We combine spectroscopy, chemometrics and machine learning to
+            develop rapid analytical platforms for chemical identification,
+            classification and quantitative prediction at the point of need.
           </p>
 
         </div>
@@ -545,13 +655,14 @@
           <div class="card-number">02</div>
 
           <h3>
-            Chemical Fingerprinting
+            Circular Materials and Polymer Analytics
           </h3>
 
           <p>
-            Developing spectral fingerprints and orthogonal analytical
-            evidence for authentication, provenance, quality assurance and
-            chemical characterisation.
+            We develop analytical methods for recycled and manufactured
+            polymer systems, including material identification, feedstock
+            qualification, contamination detection, degradation assessment
+            and circular-economy decision making.
           </p>
 
         </div>
@@ -562,12 +673,14 @@
           <div class="card-number">03</div>
 
           <h3>
-            Environmental Analysis
+            Emerging Pharmaceuticals, Peptides and Sports Integrity
           </h3>
 
           <p>
-            Developing analytical strategies for microplastics,
-            contaminants and chemically complex environmental matrices.
+            We investigate rapid analytical strategies for emerging
+            pharmaceuticals, peptide-based agents and performance-modifying
+            compounds, integrating rapid screening with complementary
+            confirmatory analysis.
           </p>
 
         </div>
@@ -578,13 +691,14 @@
           <div class="card-number">04</div>
 
           <h3>
-            Nanobioanalytical Materials
+            AI-Guided Functional Materials and Biointerface Engineering
           </h3>
 
           <p>
-            Investigating functional and antimicrobial materials at the
-            interface of chemistry, nanotechnology, biology and analytical
-            measurement.
+            We combine materials chemistry, advanced characterisation and
+            data-driven modelling to design functional materials and
+            biointerfaces with controlled chemical, antimicrobial and
+            antifouling properties.
           </p>
 
         </div>
@@ -596,7 +710,192 @@
   </section>
 
 
-  <section id="approach">
+  <section class="platform" id="platform">
+
+    <div class="container">
+
+      <div class="section-label">
+        Analytical Platform
+      </div>
+
+      <h2>
+        How we solve the problem.
+      </h2>
+
+      <p class="section-intro">
+        Our research integrates complementary analytical measurements with
+        advanced data analysis to move from chemical signal to defensible
+        analytical evidence.
+      </p>
+
+      <div class="platform-grid">
+
+        <div class="platform-item">NIR Spectroscopy</div>
+        <div class="platform-item">FTIR Spectroscopy</div>
+        <div class="platform-item">Hyperspectral Imaging</div>
+        <div class="platform-item">Chromatography</div>
+
+        <div class="platform-item">Mass Spectrometry</div>
+        <div class="platform-item">Chemometrics</div>
+        <div class="platform-item">Machine Learning</div>
+        <div class="platform-item">Chemical Fingerprinting</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="applications">
+
+    <div class="container">
+
+      <div class="section-label">
+        Strategic Applications
+      </div>
+
+      <h2>
+        From laboratory measurement to real-world decisions.
+      </h2>
+
+      <div class="application-grid">
+
+        <div class="application-card">
+
+          <h3>
+            Plastics and the Circular Economy
+          </h3>
+
+          <p>
+            Developing rapid diagnostic approaches for polymer identification,
+            recycled feedstock quality, contamination and material degradation,
+            with applications across plastic waste recovery and advanced
+            manufacturing.
+          </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+          <h3>
+            Emerging Drugs and Sports Integrity
+          </h3>
+
+          <p>
+            Building analytical capability for rapidly evolving
+            pharmaceuticals, peptides and performance-modifying substances,
+            with relevance to future sports-integrity challenges in the
+            lead-up to Brisbane 2032.
+          </p>
+
+        </div>
+
+
+        <div class="application-card">
+
+          <h3>
+            Functional and Antimicrobial Materials
+          </h3>
+
+          <p>
+            Understanding material-biology interactions and developing
+            functional surfaces and materials designed to control microbial
+            adhesion, biofilm formation and biofouling.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="people" id="people">
+
+    <div class="container">
+
+      <div class="section-label">
+        Our People
+      </div>
+
+      <h2>
+        The Chapman Group
+      </h2>
+
+      <p class="section-intro">
+        Our researchers work across analytical chemistry, spectroscopy,
+        materials science, environmental analysis and data-driven chemical
+        measurement.
+      </p>
+
+      <div class="people-grid">
+
+        <div class="person">
+          <div class="person-name">James Chapman</div>
+          <div class="person-role">Group Leader</div>
+          <div class="person-text">
+            Analytical chemistry, spectroscopy, chemometrics and
+            research programme leadership.
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Chamodi Premasinghe</div>
+          <div class="person-role">Researcher</div>
+          <div class="person-text">
+            Research profile and project information will be added to the
+            dedicated People section.
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Chloe Broeckelman</div>
+          <div class="person-role">Researcher</div>
+          <div class="person-text">
+            Research profile and project information will be added to the
+            dedicated People section.
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Adam Kolobaric</div>
+          <div class="person-role">Researcher</div>
+          <div class="person-text">
+            Research profile and project information will be added to the
+            dedicated People section.
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">William Marron</div>
+          <div class="person-role">Researcher</div>
+          <div class="person-text">
+            Research profile and project information will be added to the
+            dedicated People section.
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="person-name">Abid Farooq</div>
+          <div class="person-role">Researcher</div>
+          <div class="person-text">
+            Research profile and project information will be added to the
+            dedicated People section.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="approach" id="approach">
 
     <div class="container">
 
@@ -613,10 +912,11 @@
           </h2>
 
           <p class="section-intro">
-            Analytical signals are only useful when they generate chemically
-            meaningful, reproducible and defensible information. We combine
-            instrumental measurement with quantitative analysis, validation
-            and data science to translate complex signals into evidence.
+            Analytical signals are only valuable when they provide chemically
+            meaningful, reproducible and defensible information. We integrate
+            instrumental measurement, experimental design, quantitative
+            analysis and data science to convert complex chemical signals into
+            evidence that can support real-world decisions.
           </p>
 
         </div>
@@ -638,7 +938,7 @@
 
             <div class="workflow-item">
               <div class="workflow-number">3</div>
-              <span>Extract informative spectral features</span>
+              <span>Extract informative chemical features</span>
             </div>
 
             <div class="workflow-item">
@@ -648,12 +948,12 @@
 
             <div class="workflow-item">
               <div class="workflow-number">5</div>
-              <span>Validate with orthogonal analytical evidence</span>
+              <span>Validate using complementary analytical evidence</span>
             </div>
 
             <div class="workflow-item">
               <div class="workflow-number">6</div>
-              <span>Translate measurement into decision-making</span>
+              <span>Translate analytical evidence into decisions</span>
             </div>
 
           </div>
@@ -678,14 +978,15 @@
         </div>
 
         <h2>
-          Join The Chapman Group
+          Work with The Chapman Group
         </h2>
 
         <p>
           We welcome enquiries from prospective Honours and PhD researchers,
           visiting scientists, academic collaborators and industry partners
-          interested in spectroscopy, chemometrics, environmental analysis,
-          functional materials and data-driven analytical chemistry.
+          interested in analytical chemistry, spectroscopy, artificial
+          intelligence, circular materials, pharmaceutical analysis and
+          functional materials.
         </p>
 
         <a class="button-primary" href="mailto:">
@@ -724,7 +1025,6 @@
   </div>
 
 </footer>
-
 
 </body>
 </html>
