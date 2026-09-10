@@ -68,7 +68,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 21px;
+    gap: 20px;
     font-size: 13px;
 }
 
@@ -235,13 +235,11 @@ h2 {
 
 .research-card {
     overflow: hidden;
-
     background: linear-gradient(
         145deg,
         rgba(15,39,59,0.98),
         rgba(9,29,46,0.98)
     );
-
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
     transition: 0.25s;
@@ -257,7 +255,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background:
         radial-gradient(circle,
         rgba(103,216,235,0.10),
@@ -319,13 +316,7 @@ h2 {
 /* APPLICATIONS */
 
 .applications {
-    background:
-        radial-gradient(
-        circle at 85% 20%,
-        rgba(0,170,220,0.10),
-        transparent 28%
-        ),
-        #081827;
+    background: #081827;
 }
 
 .application-grid {
@@ -391,7 +382,7 @@ h2 {
 
 .person-image {
     width: 100%;
-    height: 300px;
+    height: 320px;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -428,10 +419,6 @@ h2 {
     color: #67d8eb;
 }
 
-.person-email a:hover {
-    text-decoration: underline;
-}
-
 .current-work {
     margin-top: 16px;
     padding-top: 14px;
@@ -461,10 +448,9 @@ h2 {
 /* SILHOUETTE */
 
 .silhouette {
-    height: 300px;
+    height: 320px;
     position: relative;
     overflow: hidden;
-
     background:
         radial-gradient(circle at 50% 35%,
         rgba(103,216,235,0.12),
@@ -547,32 +533,24 @@ h2 {
     font-size: 13px;
 }
 
-.publication-doi {
-    color: #67d8eb;
-    font-size: 12px;
-    margin-top: 12px;
-}
-
 .in-preparation {
-    border-color: rgba(103,216,235,0.26);
+    border-color: rgba(103,216,235,0.28);
 }
 
 
-/* COLLABORATION NETWORK */
+/* NETWORK */
 
 .collaboration {
     background: #06111f;
 }
 
 .network-panel {
-    margin-top: 20px;
-    padding: 32px;
-    border: 1px solid rgba(103,216,235,0.18);
+    padding: 30px;
     border-radius: 16px;
-
+    border: 1px solid rgba(103,216,235,0.20);
     background:
-        radial-gradient(circle at 50% 50%,
-        rgba(103,216,235,0.06),
+        radial-gradient(circle at center,
+        rgba(103,216,235,0.07),
         transparent 55%),
         #091a29;
 }
@@ -583,68 +561,67 @@ h2 {
     display: block;
 }
 
-.network-line {
-    stroke: #31536a;
+.line {
+    stroke: #36576b;
     stroke-width: 2;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
-.network-line-strong {
+.line-strong {
     stroke: #67d8eb;
     stroke-width: 3;
-    opacity: 0.85;
+    opacity: 0.80;
 }
 
-.network-line-theme {
-    stroke: #406a7f;
+.line-theme {
+    stroke: #466f83;
     stroke-width: 2;
     stroke-dasharray: 6 6;
-    opacity: 0.65;
 }
 
-.network-node {
-    fill: #0d2b40;
+.node-main {
+    fill: #0e3045;
     stroke: #67d8eb;
-    stroke-width: 2;
+    stroke-width: 3;
 }
 
-.network-node-secondary {
+.node-person {
     fill: #10283b;
-    stroke: #486b7d;
+    stroke: #527687;
     stroke-width: 1.5;
 }
 
-.network-node-theme {
-    fill: #112d40;
-    stroke: #8de1ef;
-    stroke-width: 1.5;
+.node-theme {
+    fill: #102b3d;
+    stroke: #67d8eb;
+    stroke-width: 1.4;
 }
 
-.network-text {
-    fill: #ffffff;
+.node-text {
+    fill: white;
+    text-anchor: middle;
     font-size: 16px;
     font-weight: 700;
-    text-anchor: middle;
 }
 
-.network-subtext {
-    fill: #9fb5bf;
+.node-sub {
+    fill: #9cb4be;
+    text-anchor: middle;
     font-size: 11px;
-    text-anchor: middle;
 }
 
-.network-theme-text {
+.theme-text {
     fill: #8de1ef;
+    text-anchor: middle;
     font-size: 12px;
     font-weight: 700;
-    text-anchor: middle;
 }
 
 .network-note {
-    margin-top: 22px;
+    margin-top: 18px;
+    max-width: 900px;
     color: #819ba6;
     font-size: 13px;
-    max-width: 900px;
 }
 
 
@@ -706,13 +683,11 @@ h2 {
     padding: 40px;
     border-radius: 14px;
     border: 1px solid rgba(103,216,235,0.23);
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
         145deg,
         rgba(12,45,65,0.82),
         rgba(5,20,34,0.92)
-        );
+    );
 }
 
 .workflow-item {
@@ -741,16 +716,10 @@ h2 {
 }
 
 
-/* JOIN */
+/* CONTACT */
 
 .join {
-    background:
-        radial-gradient(
-        circle at 20% 50%,
-        rgba(60,190,220,0.12),
-        transparent 30%
-        ),
-        #081827;
+    background: #081827;
 }
 
 .join-box {
@@ -793,6 +762,10 @@ footer {
 .footer-text {
     color: #8199a4;
     font-size: 14px;
+}
+
+.footer-text a {
+    color: #67d8eb;
 }
 
 
@@ -855,7 +828,12 @@ footer {
     }
 
     .network-panel {
-        padding: 12px;
+        padding: 8px;
+        overflow-x: auto;
+    }
+
+    .network-svg {
+        min-width: 850px;
     }
 }
 
@@ -887,7 +865,6 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 <nav>
 
 <ul>
-
 <li><a href="#research">Research</a></li>
 <li><a href="#capabilities">Capabilities</a></li>
 <li><a href="#people">People</a></li>
@@ -895,7 +872,6 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 <li><a href="#collaboration">Network</a></li>
 <li><a href="#funding">Partners</a></li>
 <li><a href="#join">Contact</a></li>
-
 </ul>
 
 </nav>
@@ -903,6 +879,7 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 </div>
 
 </header>
+
 
 
 <main id="top">
@@ -977,7 +954,7 @@ analytical solutions.
 
 <img
 class="research-icon"
-src="images/ChatGPT Image Sep 10, 2026, 10_09_47 AM (1).png"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(1).png"
 alt="AI-enabled rapid analytical diagnostics">
 
 </div>
@@ -991,11 +968,9 @@ AI-Enabled Rapid Analytical Diagnostics
 </h3>
 
 <p>
-
 We combine spectroscopy, chemometrics and machine learning to develop
 rapid analytical platforms for chemical identification, classification,
 quantification and decision making at the point of need.
-
 </p>
 
 </div>
@@ -1010,7 +985,7 @@ quantification and decision making at the point of need.
 
 <img
 class="research-icon"
-src="images/ChatGPT Image Sep 10, 2026, 10_09_47 AM (2).png"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(2).png"
 alt="Circular materials and polymer analytics">
 
 </div>
@@ -1024,12 +999,10 @@ Circular Materials and Polymer Analytics
 </h3>
 
 <p>
-
-We develop analytical methods for recycled and manufactured polymer
-systems, including polymer identification, feedstock qualification,
+We develop analytical methods for recycled and manufactured polymer systems,
+including polymer identification, recycled feedstock qualification,
 contamination detection, degradation assessment and circular-economy
 decision making.
-
 </p>
 
 </div>
@@ -1044,7 +1017,7 @@ decision making.
 
 <img
 class="research-icon"
-src="images/ChatGPT Image Sep 10, 2026, 10_09_49 AM (3).png"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_49%20AM%20(3).png"
 alt="Emerging pharmaceuticals peptides and sports integrity">
 
 </div>
@@ -1058,11 +1031,9 @@ Emerging Pharmaceuticals, Peptides and Sports Integrity
 </h3>
 
 <p>
-
 We develop rapid analytical strategies for emerging pharmaceuticals,
 peptide-based agents and performance-modifying compounds, integrating
 screening technologies with complementary confirmatory analysis.
-
 </p>
 
 </div>
@@ -1077,7 +1048,7 @@ screening technologies with complementary confirmatory analysis.
 
 <img
 class="research-icon"
-src="images/ChatGPT Image Sep 10, 2026, 10_09_50 AM (4).png"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_50%20AM%20(4).png"
 alt="AI-guided functional materials and biointerface engineering">
 
 </div>
@@ -1091,11 +1062,9 @@ AI-Guided Functional Materials and Biointerface Engineering
 </h3>
 
 <p>
-
 We combine materials chemistry, advanced characterisation and
 data-driven modelling to design functional materials and biointerfaces
 with controlled chemical, antimicrobial and antifouling properties.
-
 </p>
 
 </div>
@@ -1124,12 +1093,9 @@ From chemical measurement to analytical evidence.
 </h2>
 
 <p class="section-intro">
-
 Our research combines complementary instrumentation with quantitative
 analysis, chemometrics, machine learning and rigorous validation.
-
 </p>
-
 
 <div class="capability-grid">
 
@@ -1137,7 +1103,6 @@ analysis, chemometrics, machine learning and rigorous validation.
 <div class="capability">FTIR Spectroscopy</div>
 <div class="capability">Hyperspectral Imaging</div>
 <div class="capability">Chromatography</div>
-
 <div class="capability">Mass Spectrometry</div>
 <div class="capability">Chemometrics</div>
 <div class="capability">Machine Learning</div>
@@ -1163,9 +1128,7 @@ Strategic Applications
 Translating analytical science into real-world decisions.
 </h2>
 
-
 <div class="application-grid">
-
 
 <div class="application-card">
 
@@ -1174,11 +1137,9 @@ Plastics and the Circular Economy
 </h3>
 
 <p>
-
 Rapid analytical methods for polymer identification, recycled feedstock
 quality, contamination, degradation and materials recovery across
 circular-economy and advanced-manufacturing systems.
-
 </p>
 
 </div>
@@ -1191,11 +1152,9 @@ Emerging Drugs and Sports Integrity
 </h3>
 
 <p>
-
 Analytical capability for rapidly evolving pharmaceuticals, peptides
 and performance-modifying substances, with relevance to emerging
 sports-integrity challenges approaching Brisbane 2032.
-
 </p>
 
 </div>
@@ -1208,15 +1167,12 @@ Functional and Antimicrobial Materials
 </h3>
 
 <p>
-
 Understanding material-biology interactions and developing functional
 surfaces and materials to control microbial adhesion, biofilm formation
 and biofouling.
-
 </p>
 
 </div>
-
 
 </div>
 
@@ -1239,11 +1195,9 @@ The Chapman Group
 </h2>
 
 <p class="section-intro">
-
 Our researchers span analytical chemistry, spectroscopy, chemometrics,
 artificial intelligence, polymer science, antimicrobial materials,
 forensic chemistry and biomedical analysis.
-
 </p>
 
 
@@ -1258,13 +1212,13 @@ Group Leader
 
 <img
 class="person-image"
-src="images/james-chapman.png"
-alt="James Chapman">
+src="images/Dr%20James%20Chapman_Group%20Leader%20Nanobioanalytical.png"
+alt="Dr James Chapman">
 
 <div class="person-content">
 
 <div class="person-name">
-James Chapman
+Dr James Chapman
 </div>
 
 <div class="person-role">
@@ -1272,26 +1226,20 @@ Group Leader
 </div>
 
 <div class="person-project">
-
-Analytical chemistry, spectroscopy, chemometrics, artificial
-intelligence, advanced materials and translational analytical science.
-
+Analytical chemistry, spectroscopy, chemometrics, artificial intelligence,
+advanced materials and translational analytical science.
 </div>
 
 <div class="person-email">
-
 <a href="mailto:james.chapman@griffith.edu.au">
 james.chapman@griffith.edu.au
 </a>
-
 </div>
 
 <div class="person-themes">
-
 <span class="theme-pill">Cross-programme</span>
 <span class="theme-pill">Analytical Chemistry</span>
 <span class="theme-pill">AI + Spectroscopy</span>
-
 </div>
 
 </div>
@@ -1330,11 +1278,9 @@ Postdoctoral Research Fellow
 </div>
 
 <div class="person-project">
-
 Cross-programme research leadership and project oversight spanning
 rapid analytical diagnostics, spectroscopy, chemometrics, circular
 materials and emerging analytical applications.
-
 </div>
 
 </div>
@@ -1354,21 +1300,24 @@ PhD Researchers
 
 <div class="person-card">
 
-<img class="person-image"
+<img
+class="person-image"
 src="images/Chamodi.jpeg"
 alt="Chamodi Premasinghe">
 
 <div class="person-content">
 
-<div class="person-name">Chamodi Premasinghe</div>
+<div class="person-name">
+Chamodi Premasinghe
+</div>
 
-<div class="person-role">PhD Researcher</div>
+<div class="person-role">
+PhD Researcher
+</div>
 
 <div class="person-project">
-
 Development and Characterisation of Novel Antimicrobial Materials for
 Hospital Applications Using a Diabetic Foot Ulcer Biofilm Model
-
 </div>
 
 </div>
@@ -1379,28 +1328,29 @@ Hospital Applications Using a Diabetic Foot Ulcer Biofilm Model
 
 <div class="person-card">
 
-<img class="person-image"
+<img
+class="person-image"
 src="images/chloe.jpg"
 alt="Chloe Broeckelman">
 
 <div class="person-content">
 
-<div class="person-name">Chloe Broeckelman</div>
+<div class="person-name">
+Chloe Broeckelman
+</div>
 
-<div class="person-role">PhD Researcher</div>
+<div class="person-role">
+PhD Researcher
+</div>
 
 <div class="person-project">
-
-Rapid Spectroscopic Characterisation of Medical Plastic Waste for
-Polymer Identification, Contamination Assessment and Circular-Economy Recovery
-
+Rapid Spectroscopic Characterisation of Medical Plastic Waste for Polymer
+Identification, Contamination Assessment and Circular-Economy Recovery
 </div>
 
 <div class="current-work">
-
 Current work: review article in preparation on analytical characterisation
 and circular-economy recovery of medical plastic waste.
-
 </div>
 
 </div>
@@ -1411,21 +1361,24 @@ and circular-economy recovery of medical plastic waste.
 
 <div class="person-card">
 
-<img class="person-image"
+<img
+class="person-image"
 src="images/Adam.jpg"
 alt="Adam Kolobaric">
 
 <div class="person-content">
 
-<div class="person-name">Adam Kolobaric</div>
+<div class="person-name">
+Adam Kolobaric
+</div>
 
-<div class="person-role">PhD Researcher</div>
+<div class="person-role">
+PhD Researcher
+</div>
 
 <div class="person-project">
-
 Rapid Spectroscopic Detection and Characterisation of Microplastics,
 Nanoplastics and Associated Chemical Additives in Food-Waste Matrices
-
 </div>
 
 </div>
@@ -1447,14 +1400,16 @@ Nanoplastics and Associated Chemical Additives in Food-Waste Matrices
 
 <div class="person-content">
 
-<div class="person-name">William Marron</div>
+<div class="person-name">
+William Marron
+</div>
 
-<div class="person-role">PhD Researcher</div>
+<div class="person-role">
+PhD Researcher
+</div>
 
 <div class="person-project">
-
 Spectroscopic and Chemometric Characterisation of Complex Beer Matrices
-
 </div>
 
 </div>
@@ -1486,15 +1441,17 @@ Honours Researchers
 
 <div class="person-content">
 
-<div class="person-name">Brittany De Jong</div>
+<div class="person-name">
+Brittany De Jong
+</div>
 
-<div class="person-role">Honours Researcher</div>
+<div class="person-role">
+Honours Researcher
+</div>
 
 <div class="person-project">
-
 Development of Rapid Spectroscopic Biosensing Methods for the Detection
 of Kidney Disease Biomarkers
-
 </div>
 
 </div>
@@ -1505,21 +1462,24 @@ of Kidney Disease Biomarkers
 
 <div class="person-card">
 
-<img class="person-image"
-src="images/Lauren Bridger.jpeg"
+<img
+class="person-image"
+src="images/Lauren%20Bridger.jpeg"
 alt="Lauren Bridger">
 
 <div class="person-content">
 
-<div class="person-name">Lauren Bridger</div>
+<div class="person-name">
+Lauren Bridger
+</div>
 
-<div class="person-role">Honours Researcher</div>
+<div class="person-role">
+Honours Researcher
+</div>
 
 <div class="person-project">
-
 AI-Enabled Analytical Characterisation of Plastic Recyclates for
 Circular-Economy Applications
-
 </div>
 
 </div>
@@ -1530,21 +1490,24 @@ Circular-Economy Applications
 
 <div class="person-card">
 
-<img class="person-image"
+<img
+class="person-image"
 src="images/Jacqui.jpg"
 alt="Jacqulyn Wonnocott">
 
 <div class="person-content">
 
-<div class="person-name">Jacqulyn Wonnocott</div>
+<div class="person-name">
+Jacqulyn Wonnocott
+</div>
 
-<div class="person-role">Honours Researcher</div>
+<div class="person-role">
+Honours Researcher
+</div>
 
 <div class="person-project">
-
 Development of Rapid Spectroscopic Methods for the Forensic Analysis
 and Discrimination of Cosmetic Products
-
 </div>
 
 </div>
@@ -1573,10 +1536,8 @@ Research outputs from the group.
 </h2>
 
 <p class="section-intro">
-
-Selected recent publications illustrate work across AI-enabled
-diagnostics, spectroscopy, microplastics and circular materials.
-
+Selected recent publications illustrate work across AI-enabled diagnostics,
+spectroscopy, microplastics and circular materials.
 </p>
 
 
@@ -1608,7 +1569,7 @@ Applied Spectroscopy Reviews · 2026
 <div class="publication-card">
 
 <div class="publication-type">
-Review Article · Circular Materials
+Circular Materials
 </div>
 
 <h3>
@@ -1630,7 +1591,7 @@ Journal of Hazardous Materials Advances · 2026
 <div class="publication-card">
 
 <div class="publication-type">
-Research Article · Portable Spectroscopy
+Portable Spectroscopy
 </div>
 
 <h3>
@@ -1687,15 +1648,12 @@ Collaboration Network
 </div>
 
 <h2>
-Research connected across people, projects and publications.
+Connected research across people and programmes.
 </h2>
 
 <p class="section-intro">
-
-The group operates across interconnected research programmes. This
-network highlights selected relationships arising from shared
-publications, research themes and active projects.
-
+The group's research is deliberately interconnected. Researchers contribute
+across shared analytical platforms, publications and translational projects.
 </p>
 
 
@@ -1705,210 +1663,238 @@ publications, research themes and active projects.
 class="network-svg"
 viewBox="0 0 1200 720"
 role="img"
-aria-label="Selected collaboration network for The Nanobioanalytical Lab">
+aria-label="Nanobioanalytical Lab collaboration network">
 
 
-<!-- LINKS TO CENTRAL GROUP LEADERSHIP -->
+<!-- CENTRAL CONNECTIONS -->
 
-<line class="network-line-strong" x1="600" y1="350" x2="340" y2="195"/>
-<line class="network-line-strong" x1="600" y1="350" x2="520" y2="145"/>
-<line class="network-line-strong" x1="600" y1="350" x2="760" y2="170"/>
-<line class="network-line-strong" x1="600" y1="350" x2="900" y2="255"/>
+<line class="line-strong" x1="600" y1="350" x2="330" y2="190"/>
+<line class="line-strong" x1="600" y1="350" x2="515" y2="135"/>
+<line class="line-strong" x1="600" y1="350" x2="765" y2="165"/>
+<line class="line-strong" x1="600" y1="350" x2="925" y2="270"/>
 
-<line class="network-line" x1="600" y1="350" x2="310" y2="450"/>
-<line class="network-line" x1="600" y1="350" x2="470" y2="560"/>
-<line class="network-line" x1="600" y1="350" x2="750" y2="560"/>
-<line class="network-line" x1="600" y1="350" x2="930" y2="455"/>
-
-
-<!-- SELECTED SHARED PUBLICATION / PROJECT CONNECTIONS -->
-
-<line class="network-line-strong" x1="340" y1="195" x2="520" y2="145"/>
-<line class="network-line-strong" x1="520" y1="145" x2="760" y2="170"/>
-<line class="network-line-strong" x1="340" y1="195" x2="760" y2="170"/>
-
-<line class="network-line" x1="340" y1="195" x2="310" y2="450"/>
-<line class="network-line" x1="760" y1="170" x2="470" y2="560"/>
+<line class="line" x1="600" y1="350" x2="315" y2="455"/>
+<line class="line" x1="600" y1="350" x2="475" y2="565"/>
+<line class="line" x1="600" y1="350" x2="750" y2="565"/>
+<line class="line" x1="600" y1="350" x2="935" y2="465"/>
 
 
-<!-- THEME CONNECTIONS -->
+<!-- SELECTED CO-AUTHOR / PROJECT RELATIONSHIPS -->
 
-<line class="network-line-theme" x1="600" y1="350" x2="165" y2="300"/>
-<line class="network-line-theme" x1="600" y1="350" x2="1040" y2="145"/>
-<line class="network-line-theme" x1="600" y1="350" x2="1050" y2="590"/>
-<line class="network-line-theme" x1="600" y1="350" x2="150" y2="610"/>
+<line class="line-strong" x1="330" y1="190" x2="515" y2="135"/>
+<line class="line-strong" x1="515" y1="135" x2="765" y2="165"/>
+<line class="line-strong" x1="330" y1="190" x2="765" y2="165"/>
+
+<line class="line" x1="330" y1="190" x2="315" y2="455"/>
+<line class="line" x1="765" y1="165" x2="315" y2="455"/>
 
 
-<!-- CENTRAL NODE -->
+<!-- RESEARCH PROGRAMME CONNECTIONS -->
 
-<circle class="network-node" cx="600" cy="350" r="82"/>
+<line class="line-theme" x1="600" y1="350" x2="145" y2="300"/>
+<line class="line-theme" x1="600" y1="350" x2="1050" y2="125"/>
+<line class="line-theme" x1="600" y1="350" x2="1060" y2="600"/>
+<line class="line-theme" x1="600" y1="350" x2="145" y2="620"/>
 
-<text class="network-text" x="600" y="340">
+
+<!-- JAMES -->
+
+<circle class="node-main" cx="600" cy="350" r="82"/>
+
+<text class="node-text" x="600" y="342">
 James
 </text>
 
-<text class="network-text" x="600" y="362">
+<text class="node-text" x="600" y="363">
 Chapman
 </text>
 
-<text class="network-subtext" x="600" y="389">
+<text class="node-sub" x="600" y="390">
 Group Leader
 </text>
 
 
 <!-- ABID -->
 
-<circle class="network-node" cx="900" cy="255" r="62"/>
+<circle class="node-main" cx="925" cy="270" r="65"/>
 
-<text class="network-text" x="900" y="250">
+<text class="node-text" x="925" y="263">
 Abid
 </text>
 
-<text class="network-text" x="900" y="270">
+<text class="node-text" x="925" y="284">
 Farooq
 </text>
 
-<text class="network-subtext" x="900" y="292">
+<text class="node-sub" x="925" y="307">
 Postdoctoral Fellow
 </text>
 
 
-<!-- PHD NODES -->
+<!-- ADAM -->
 
-<circle class="network-node-secondary" cx="340" cy="195" r="58"/>
+<circle class="node-person" cx="330" cy="190" r="58"/>
 
-<text class="network-text" x="340" y="192">
+<text class="node-text" x="330" y="187">
 Adam
 </text>
 
-<text class="network-subtext" x="340" y="214">
+<text class="node-sub" x="330" y="209">
 Microplastics
 </text>
 
 
-<circle class="network-node-secondary" cx="520" cy="145" r="58"/>
+<!-- CHAMODI -->
 
-<text class="network-text" x="520" y="142">
+<circle class="node-person" cx="515" cy="135" r="58"/>
+
+<text class="node-text" x="515" y="132">
 Chamodi
 </text>
 
-<text class="network-subtext" x="520" y="164">
+<text class="node-sub" x="515" y="154">
 Antimicrobials
 </text>
 
 
-<circle class="network-node-secondary" cx="760" cy="170" r="58"/>
+<!-- CHLOE -->
 
-<text class="network-text" x="760" y="167">
+<circle class="node-person" cx="765" cy="165" r="58"/>
+
+<text class="node-text" x="765" y="162">
 Chloe
 </text>
 
-<text class="network-subtext" x="760" y="189">
-Medical plastics
+<text class="node-sub" x="765" y="184">
+Medical Plastics
 </text>
 
 
-<circle class="network-node-secondary" cx="930" cy="455" r="58"/>
+<!-- WILLIAM -->
 
-<text class="network-text" x="930" y="452">
+<circle class="node-person" cx="935" cy="465" r="58"/>
+
+<text class="node-text" x="935" y="462">
 William
 </text>
 
-<text class="network-subtext" x="930" y="474">
-Beer matrices
+<text class="node-sub" x="935" y="484">
+Beer Matrices
 </text>
 
 
-<!-- HONOURS NODES -->
+<!-- LAUREN -->
 
-<circle class="network-node-secondary" cx="310" cy="450" r="55"/>
+<circle class="node-person" cx="315" cy="455" r="55"/>
 
-<text class="network-text" x="310" y="447">
+<text class="node-text" x="315" y="452">
 Lauren
 </text>
 
-<text class="network-subtext" x="310" y="469">
-Plastic recyclates
+<text class="node-sub" x="315" y="474">
+Plastic Recyclates
 </text>
 
 
-<circle class="network-node-secondary" cx="470" cy="560" r="55"/>
+<!-- BRITTANY -->
 
-<text class="network-text" x="470" y="557">
+<circle class="node-person" cx="475" cy="565" r="55"/>
+
+<text class="node-text" x="475" y="562">
 Brittany
 </text>
 
-<text class="network-subtext" x="470" y="579">
+<text class="node-sub" x="475" y="584">
 Biosensing
 </text>
 
 
-<circle class="network-node-secondary" cx="750" cy="560" r="55"/>
+<!-- JACQULYN -->
 
-<text class="network-text" x="750" y="557">
+<circle class="node-person" cx="750" cy="565" r="55"/>
+
+<text class="node-text" x="750" y="562">
 Jacqulyn
 </text>
 
-<text class="network-subtext" x="750" y="579">
+<text class="node-sub" x="750" y="584">
 Forensics
 </text>
 
 
-<!-- RESEARCH THEMES -->
+<!-- PROGRAMME 1 -->
 
-<rect class="network-node-theme"
-x="65" y="260"
-rx="18" ry="18"
-width="200" height="80"/>
+<rect
+class="node-theme"
+x="35"
+y="260"
+rx="18"
+width="220"
+height="82"/>
 
-<text class="network-theme-text" x="165" y="292">
+<text class="theme-text" x="145" y="293">
 AI-Enabled Rapid
 </text>
 
-<text class="network-theme-text" x="165" y="311">
+<text class="theme-text" x="145" y="314">
 Diagnostics
 </text>
 
 
-<rect class="network-node-theme"
-x="940" y="90"
-rx="18" ry="18"
-width="200" height="90"/>
+<!-- PROGRAMME 2 -->
 
-<text class="network-theme-text" x="1040" y="124">
+<rect
+class="node-theme"
+x="940"
+y="82"
+rx="18"
+width="220"
+height="88"/>
+
+<text class="theme-text" x="1050" y="116">
 Circular Materials
 </text>
 
-<text class="network-theme-text" x="1040" y="145">
+<text class="theme-text" x="1050" y="137">
 & Polymer Analytics
 </text>
 
 
-<rect class="network-node-theme"
-x="930" y="545"
-rx="18" ry="18"
-width="240" height="90"/>
+<!-- PROGRAMME 3 -->
 
-<text class="network-theme-text" x="1050" y="579">
-Emerging Pharmaceuticals,
+<rect
+class="node-theme"
+x="930"
+y="550"
+rx="18"
+width="260"
+height="96"/>
+
+<text class="theme-text" x="1060" y="583">
+Emerging Pharmaceuticals
 </text>
 
-<text class="network-theme-text" x="1050" y="600">
-Peptides & Sport
+<text class="theme-text" x="1060" y="604">
+Peptides & Sports Integrity
 </text>
 
 
-<rect class="network-node-theme"
-x="30" y="565"
-rx="18" ry="18"
-width="240" height="90"/>
+<!-- PROGRAMME 4 -->
 
-<text class="network-theme-text" x="150" y="599">
+<rect
+class="node-theme"
+x="15"
+y="572"
+rx="18"
+width="260"
+height="96"/>
+
+<text class="theme-text" x="145" y="606">
 Functional Materials
 </text>
 
-<text class="network-theme-text" x="150" y="620">
-& Biointerfaces
+<text class="theme-text" x="145" y="627">
+& Biointerface Engineering
 </text>
 
 
@@ -1917,10 +1903,10 @@ Functional Materials
 
 <p class="network-note">
 
-Solid cyan connections indicate selected close collaborations associated
-with shared publications or strongly overlapping projects. Other connections
-show broader project and programme relationships. The network is a schematic
-representation of current group activity rather than a bibliometric analysis.
+The network provides a high-level representation of selected publication,
+project and research-programme relationships within the group. It is intended
+to illustrate the interconnected nature of the research rather than provide
+a formal bibliometric analysis.
 
 </p>
 
@@ -1945,10 +1931,8 @@ Collaborative research at scale.
 </h2>
 
 <p class="section-intro">
-
 Our research is strengthened through major collaborative programmes,
 institutional partnerships and professional scientific networks.
-
 </p>
 
 
@@ -1962,11 +1946,9 @@ Solving Plastic Waste CRC
 </h3>
 
 <p>
-
 Collaborative research across polymer analytics, plastic waste,
-microplastics, resource recovery and the transition towards a
-circular economy for plastics.
-
+microplastics, resource recovery and the transition towards a circular
+economy for plastics.
 </p>
 
 </div>
@@ -1980,10 +1962,8 @@ Additive Manufacturing CRC
 </h3>
 
 <p>
-
 Research across advanced manufacturing, polymer characterisation,
 recycled feedstocks and next-generation materials.
-
 </p>
 
 </div>
@@ -1997,10 +1977,8 @@ Queensland Brain Institute
 </h3>
 
 <p>
-
 Collaborative translational research supporting emerging analytical,
 biosensing and biomedical applications.
-
 </p>
 
 </div>
@@ -2014,10 +1992,8 @@ Royal Society of Chemistry
 </h3>
 
 <p>
-
 Scientific engagement and collaboration across analytical chemistry,
 materials chemistry and chemical measurement.
-
 </p>
 
 </div>
@@ -2031,7 +2007,7 @@ materials chemistry and chemical measurement.
 
 
 
-<section class="approach" id="approach">
+<section class="approach">
 
 <div class="container">
 
@@ -2048,12 +2024,10 @@ From measurement to evidence.
 </h2>
 
 <p class="section-intro">
-
-Analytical signals are only valuable when they provide chemically
-meaningful, reproducible and defensible information. We integrate
-instrumental measurement, experimental design, quantitative analysis
-and data science to convert complex chemical signals into evidence.
-
+Analytical signals are only valuable when they provide chemically meaningful,
+reproducible and defensible information. We integrate instrumental measurement,
+experimental design, quantitative analysis and data science to convert complex
+chemical signals into evidence.
 </p>
 
 </div>
@@ -2116,30 +2090,26 @@ Work with The Chapman Group
 </h2>
 
 <p>
-
 We welcome enquiries from prospective Honours and PhD researchers,
 postdoctoral researchers, visiting scientists, academic collaborators
 and industry partners interested in analytical chemistry, spectroscopy,
 artificial intelligence, circular materials, pharmaceutical analysis,
 antimicrobial materials and functional materials.
-
 </p>
 
 
 <div class="buttons">
 
-<a class="button-primary"
+<a
+class="button-primary"
 href="mailto:james.chapman@griffith.edu.au">
-
 Email James Chapman
-
 </a>
 
-<a class="button-secondary"
+<a
+class="button-secondary"
 href="#people">
-
 Meet the group
-
 </a>
 
 </div>
