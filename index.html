@@ -389,6 +389,18 @@ h2 {
     background: #0a1928;
 }
 
+/* Individual photo positioning */
+
+.james-photo {
+    height: 380px;
+    object-position: center top;
+}
+
+.jacqulyn-photo {
+    height: 340px;
+    object-position: center top;
+}
+
 .person-content {
     padding: 25px;
 }
@@ -417,6 +429,10 @@ h2 {
 
 .person-email a {
     color: #67d8eb;
+}
+
+.person-email a:hover {
+    text-decoration: underline;
 }
 
 .current-work {
@@ -835,6 +851,14 @@ footer {
     .network-svg {
         min-width: 850px;
     }
+
+    .james-photo {
+        height: 350px;
+    }
+
+    .jacqulyn-photo {
+        height: 330px;
+    }
 }
 
 </style>
@@ -1211,7 +1235,7 @@ Group Leader
 <div class="person-card">
 
 <img
-class="person-image"
+class="person-image james-photo"
 src="images/Dr%20James%20Chapman_Group%20Leader%20Nanobioanalytical.png"
 alt="Dr James Chapman">
 
@@ -1491,7 +1515,7 @@ Circular-Economy Applications
 <div class="person-card">
 
 <img
-class="person-image"
+class="person-image jacqulyn-photo"
 src="images/Jacqui.jpg"
 alt="Jacqulyn Wonnocott">
 
@@ -1666,8 +1690,6 @@ role="img"
 aria-label="Nanobioanalytical Lab collaboration network">
 
 
-<!-- CENTRAL CONNECTIONS -->
-
 <line class="line-strong" x1="600" y1="350" x2="330" y2="190"/>
 <line class="line-strong" x1="600" y1="350" x2="515" y2="135"/>
 <line class="line-strong" x1="600" y1="350" x2="765" y2="165"/>
@@ -1678,9 +1700,6 @@ aria-label="Nanobioanalytical Lab collaboration network">
 <line class="line" x1="600" y1="350" x2="750" y2="565"/>
 <line class="line" x1="600" y1="350" x2="935" y2="465"/>
 
-
-<!-- SELECTED CO-AUTHOR / PROJECT RELATIONSHIPS -->
-
 <line class="line-strong" x1="330" y1="190" x2="515" y2="135"/>
 <line class="line-strong" x1="515" y1="135" x2="765" y2="165"/>
 <line class="line-strong" x1="330" y1="190" x2="765" y2="165"/>
@@ -1688,16 +1707,11 @@ aria-label="Nanobioanalytical Lab collaboration network">
 <line class="line" x1="330" y1="190" x2="315" y2="455"/>
 <line class="line" x1="765" y1="165" x2="315" y2="455"/>
 
-
-<!-- RESEARCH PROGRAMME CONNECTIONS -->
-
 <line class="line-theme" x1="600" y1="350" x2="145" y2="300"/>
 <line class="line-theme" x1="600" y1="350" x2="1050" y2="125"/>
 <line class="line-theme" x1="600" y1="350" x2="1060" y2="600"/>
 <line class="line-theme" x1="600" y1="350" x2="145" y2="620"/>
 
-
-<!-- JAMES -->
 
 <circle class="node-main" cx="600" cy="350" r="82"/>
 
@@ -1714,8 +1728,6 @@ Group Leader
 </text>
 
 
-<!-- ABID -->
-
 <circle class="node-main" cx="925" cy="270" r="65"/>
 
 <text class="node-text" x="925" y="263">
@@ -1731,8 +1743,6 @@ Postdoctoral Fellow
 </text>
 
 
-<!-- ADAM -->
-
 <circle class="node-person" cx="330" cy="190" r="58"/>
 
 <text class="node-text" x="330" y="187">
@@ -1743,8 +1753,6 @@ Adam
 Microplastics
 </text>
 
-
-<!-- CHAMODI -->
 
 <circle class="node-person" cx="515" cy="135" r="58"/>
 
@@ -1757,8 +1765,6 @@ Antimicrobials
 </text>
 
 
-<!-- CHLOE -->
-
 <circle class="node-person" cx="765" cy="165" r="58"/>
 
 <text class="node-text" x="765" y="162">
@@ -1769,8 +1775,6 @@ Chloe
 Medical Plastics
 </text>
 
-
-<!-- WILLIAM -->
 
 <circle class="node-person" cx="935" cy="465" r="58"/>
 
@@ -1783,8 +1787,6 @@ Beer Matrices
 </text>
 
 
-<!-- LAUREN -->
-
 <circle class="node-person" cx="315" cy="455" r="55"/>
 
 <text class="node-text" x="315" y="452">
@@ -1795,8 +1797,6 @@ Lauren
 Plastic Recyclates
 </text>
 
-
-<!-- BRITTANY -->
 
 <circle class="node-person" cx="475" cy="565" r="55"/>
 
@@ -1809,8 +1809,6 @@ Biosensing
 </text>
 
 
-<!-- JACQULYN -->
-
 <circle class="node-person" cx="750" cy="565" r="55"/>
 
 <text class="node-text" x="750" y="562">
@@ -1821,8 +1819,6 @@ Jacqulyn
 Forensics
 </text>
 
-
-<!-- PROGRAMME 1 -->
 
 <rect
 class="node-theme"
@@ -1841,8 +1837,6 @@ Diagnostics
 </text>
 
 
-<!-- PROGRAMME 2 -->
-
 <rect
 class="node-theme"
 x="940"
@@ -1860,8 +1854,6 @@ Circular Materials
 </text>
 
 
-<!-- PROGRAMME 3 -->
-
 <rect
 class="node-theme"
 x="930"
@@ -1878,8 +1870,6 @@ Emerging Pharmaceuticals
 Peptides & Sports Integrity
 </text>
 
-
-<!-- PROGRAMME 4 -->
 
 <rect
 class="node-theme"
