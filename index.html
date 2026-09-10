@@ -234,17 +234,20 @@ h2 {
 }
 
 .research-card {
+    position: relative;
+    overflow: hidden;
+
     background:
         linear-gradient(
         145deg,
-        rgba(15,39,59,0.96),
-        rgba(9,29,46,0.96)
+        rgba(15,39,59,0.98),
+        rgba(9,29,46,0.98)
         );
 
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px;
-    padding: 36px;
-    min-height: 310px;
+    border-radius: 16px;
+
+    min-height: 470px;
     transition: 0.25s;
 }
 
@@ -253,17 +256,39 @@ h2 {
     border-color: rgba(103,216,235,0.50);
 }
 
+.research-icon-area {
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle,
+        rgba(103,216,235,0.09),
+        transparent 65%);
+}
+
+.research-icon {
+    width: 185px;
+    height: 185px;
+    object-fit: contain;
+}
+
+.research-content {
+    padding: 30px 34px 35px 34px;
+}
+
 .card-number {
     color: #67d8eb;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 3px;
-    margin-bottom: 30px;
+    margin-bottom: 14px;
 }
 
 .research-card h3 {
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1.2;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 }
 
 .research-card p {
@@ -372,6 +397,7 @@ h2 {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: center;
     display: block;
     background: #0a1928;
 }
@@ -388,7 +414,6 @@ h2 {
 .person-role {
     color: #67d8eb;
     font-size: 13px;
-    letter-spacing: 0.5px;
     margin-bottom: 16px;
 }
 
@@ -416,7 +441,7 @@ h2 {
 }
 
 
-/* SILHOUETTE */
+/* SILHOUETTES */
 
 .silhouette {
     height: 300px;
@@ -427,6 +452,7 @@ h2 {
         radial-gradient(circle at 50% 35%,
         rgba(103,216,235,0.12),
         transparent 30%),
+
         linear-gradient(
         145deg,
         #10283b,
@@ -634,6 +660,11 @@ footer {
         padding: 30px;
     }
 
+    .research-icon {
+        width: 160px;
+        height: 160px;
+    }
+
 }
 
 </style>
@@ -694,13 +725,11 @@ Analytical Chemistry · Spectroscopy · Chemometrics · Artificial Intelligence
 
 </div>
 
-
 <h1>
 
 Chemical information from complex systems.
 
 </h1>
-
 
 <p class="hero-text">
 
@@ -711,20 +740,14 @@ health, materials, environmental science and advanced manufacturing.
 
 </p>
 
-
 <div class="buttons">
 
 <a class="button-primary" href="#research">
-
 Explore our research
-
 </a>
 
-
 <a class="button-secondary" href="#people">
-
 Meet the group
-
 </a>
 
 </div>
@@ -740,24 +763,18 @@ Meet the group
 <div class="container">
 
 <div class="section-label">
-
 Research Programmes
-
 </div>
 
-
 <h2>
-
 Analytical chemistry for emerging challenges.
-
 </h2>
-
 
 <p class="section-intro">
 
-Our research programmes are connected by a common objective:
-developing faster, more informative and more accessible analytical
-methods for chemically complex systems.
+Our research programmes connect advanced analytical measurement with
+chemometrics and artificial intelligence to address emerging challenges
+across health, materials, environmental science and manufacturing.
 
 </p>
 
@@ -767,12 +784,21 @@ methods for chemically complex systems.
 
 <div class="research-card">
 
+<div class="research-icon-area">
+
+<img
+class="research-icon"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(1).png"
+alt="AI-enabled rapid analytical diagnostics">
+
+</div>
+
+<div class="research-content">
+
 <div class="card-number">01</div>
 
 <h3>
-
 AI-Enabled Rapid Analytical Diagnostics
-
 </h3>
 
 <p>
@@ -785,16 +811,27 @@ and quantitative prediction at the point of need.
 
 </div>
 
+</div>
+
 
 
 <div class="research-card">
 
+<div class="research-icon-area">
+
+<img
+class="research-icon"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(2).png"
+alt="Circular materials and polymer analytics">
+
+</div>
+
+<div class="research-content">
+
 <div class="card-number">02</div>
 
 <h3>
-
 Circular Materials and Polymer Analytics
-
 </h3>
 
 <p>
@@ -808,26 +845,38 @@ circular-economy decision making.
 
 </div>
 
+</div>
+
 
 
 <div class="research-card">
 
+<div class="research-icon-area">
+
+<img
+class="research-icon"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_49%20AM%20(3).png"
+alt="Emerging pharmaceuticals peptides and sports integrity">
+
+</div>
+
+<div class="research-content">
+
 <div class="card-number">03</div>
 
 <h3>
-
 Emerging Pharmaceuticals, Peptides and Sports Integrity
-
 </h3>
 
 <p>
 
-We investigate rapid analytical strategies for emerging
-pharmaceuticals, peptide-based agents and performance-modifying
-compounds, integrating high-throughput screening with complementary
-confirmatory analysis.
+We develop rapid analytical strategies for emerging pharmaceuticals,
+peptide-based agents and performance-modifying compounds, integrating
+screening technologies with complementary confirmatory analysis.
 
 </p>
+
+</div>
 
 </div>
 
@@ -835,12 +884,21 @@ confirmatory analysis.
 
 <div class="research-card">
 
+<div class="research-icon-area">
+
+<img
+class="research-icon"
+src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_50%20AM%20(4).png"
+alt="AI-guided functional materials and biointerface engineering">
+
+</div>
+
+<div class="research-content">
+
 <div class="card-number">04</div>
 
 <h3>
-
 AI-Guided Functional Materials and Biointerface Engineering
-
 </h3>
 
 <p>
@@ -850,6 +908,8 @@ data-driven modelling to design functional materials and biointerfaces
 with controlled chemical, antimicrobial and antifouling properties.
 
 </p>
+
+</div>
 
 </div>
 
@@ -866,20 +926,13 @@ with controlled chemical, antimicrobial and antifouling properties.
 
 <div class="container">
 
-
 <div class="section-label">
-
 Analytical Capabilities
-
 </div>
 
-
 <h2>
-
 From chemical measurement to analytical evidence.
-
 </h2>
-
 
 <p class="section-intro">
 
@@ -887,7 +940,6 @@ Our research integrates complementary analytical technologies with
 chemometrics, machine learning and rigorous validation.
 
 </p>
-
 
 <div class="capability-grid">
 
@@ -913,18 +965,12 @@ chemometrics, machine learning and rigorous validation.
 
 <div class="container">
 
-
 <div class="section-label">
-
 Strategic Applications
-
 </div>
 
-
 <h2>
-
 Translating analytical science into real-world decisions.
-
 </h2>
 
 
@@ -934,9 +980,7 @@ Translating analytical science into real-world decisions.
 <div class="application-card">
 
 <h3>
-
 Plastics and the Circular Economy
-
 </h3>
 
 <p>
@@ -950,13 +994,10 @@ recovery across circular-economy and advanced-manufacturing systems.
 </div>
 
 
-
 <div class="application-card">
 
 <h3>
-
 Emerging Drugs and Sports Integrity
-
 </h3>
 
 <p>
@@ -970,13 +1011,10 @@ emerging sports-integrity challenges in the lead-up to Brisbane 2032.
 </div>
 
 
-
 <div class="application-card">
 
 <h3>
-
 Functional and Antimicrobial Materials
-
 </h3>
 
 <p>
@@ -1002,20 +1040,13 @@ biofilm formation and biofouling.
 
 <div class="container">
 
-
 <div class="section-label">
-
 Our People
-
 </div>
 
-
 <h2>
-
 The Chapman Group
-
 </h2>
-
 
 <p class="section-intro">
 
@@ -1028,11 +1059,8 @@ forensic chemistry and biomedical analysis.
 
 
 <div class="people-heading">
-
 Group Leader
-
 </div>
-
 
 <div class="people-grid">
 
@@ -1042,28 +1070,20 @@ Group Leader
 <div class="silhouette">
 
 <div class="silhouette-person">
-
 <div class="silhouette-head"></div>
-
 <div class="silhouette-body"></div>
-
 </div>
 
 </div>
-
 
 <div class="person-content">
 
 <div class="person-name">
-
 James Chapman
-
 </div>
 
 <div class="person-role">
-
 Group Leader
-
 </div>
 
 <div class="person-project">
@@ -1072,7 +1092,6 @@ Analytical chemistry, spectroscopy, chemometrics, artificial intelligence,
 advanced materials and translational analytical science.
 
 </div>
-
 
 <div class="person-themes">
 
@@ -1092,58 +1111,45 @@ advanced materials and translational analytical science.
 
 
 <div class="people-heading">
-
 Postdoctoral Research Fellow
-
 </div>
-
 
 <div class="people-grid">
 
 
 <div class="person-card">
 
-
 <div class="silhouette">
 
 <div class="silhouette-person">
-
 <div class="silhouette-head"></div>
-
 <div class="silhouette-body"></div>
-
 </div>
 
 </div>
-
 
 <div class="person-content">
 
 <div class="person-name">
-
 Abid Farooq
-
 </div>
 
 <div class="person-role">
-
 Postdoctoral Research Fellow
-
 </div>
 
 <div class="person-project">
 
-Cross-programme research coordination and project oversight across
+Cross-programme research leadership and project oversight spanning
 rapid analytical diagnostics, spectroscopy, chemometrics, circular
 materials and emerging analytical applications.
 
 </div>
 
-
 <div class="person-themes">
 
 <span class="theme-pill">Cross-programme</span>
-<span class="theme-pill">Project Integration</span>
+<span class="theme-pill">Research Leadership</span>
 <span class="theme-pill">Analytical Chemistry</span>
 
 </div>
@@ -1158,11 +1164,8 @@ materials and emerging analytical applications.
 
 
 <div class="people-heading">
-
 PhD Researchers
-
 </div>
-
 
 <div class="people-grid">
 
@@ -1177,15 +1180,11 @@ alt="Chamodi Premasinghe">
 <div class="person-content">
 
 <div class="person-name">
-
 Chamodi Premasinghe
-
 </div>
 
 <div class="person-role">
-
 PhD Researcher
-
 </div>
 
 <div class="person-project">
@@ -1218,15 +1217,11 @@ alt="Chloe Broeckelman">
 <div class="person-content">
 
 <div class="person-name">
-
 Chloe Broeckelman
-
 </div>
 
 <div class="person-role">
-
 PhD Researcher
-
 </div>
 
 <div class="person-project">
@@ -1259,15 +1254,11 @@ alt="Adam Kolobaric">
 <div class="person-content">
 
 <div class="person-name">
-
 Adam Kolobaric
-
 </div>
 
 <div class="person-role">
-
 PhD Researcher
-
 </div>
 
 <div class="person-project">
@@ -1292,32 +1283,23 @@ Nanoplastics and Associated Chemical Additives in Food-Waste Matrices
 
 <div class="person-card">
 
-
 <div class="silhouette">
 
 <div class="silhouette-person">
-
 <div class="silhouette-head"></div>
-
 <div class="silhouette-body"></div>
-
 </div>
 
 </div>
-
 
 <div class="person-content">
 
 <div class="person-name">
-
 William Marron
-
 </div>
 
 <div class="person-role">
-
 PhD Researcher
-
 </div>
 
 <div class="person-project">
@@ -1343,43 +1325,31 @@ Spectroscopic and Chemometric Characterisation of Complex Beer Matrices
 
 
 <div class="people-heading">
-
 Honours Researchers
-
 </div>
-
 
 <div class="people-grid">
 
 
 <div class="person-card">
 
-
 <div class="silhouette">
 
 <div class="silhouette-person">
-
 <div class="silhouette-head"></div>
-
 <div class="silhouette-body"></div>
-
 </div>
 
 </div>
-
 
 <div class="person-content">
 
 <div class="person-name">
-
 Brittany De Jong
-
 </div>
 
 <div class="person-role">
-
 Honours Researcher
-
 </div>
 
 <div class="person-project">
@@ -1412,15 +1382,11 @@ alt="Lauren Bridger">
 <div class="person-content">
 
 <div class="person-name">
-
 Lauren Bridger
-
 </div>
 
 <div class="person-role">
-
 Honours Researcher
-
 </div>
 
 <div class="person-project">
@@ -1448,20 +1414,16 @@ Circular-Economy Applications
 <img
 class="person-image"
 src="images/Jacqui.jpg"
-alt="Jacquilyn Wonnocot">
+alt="Jacqulyn Wonnocott">
 
 <div class="person-content">
 
 <div class="person-name">
-
-Jacquilyn Wonnocot
-
+Jacqulyn Wonnocott
 </div>
 
 <div class="person-role">
-
 Honours Researcher
-
 </div>
 
 <div class="person-project">
@@ -1485,7 +1447,6 @@ and Discrimination of Cosmetic Products
 
 </div>
 
-
 </div>
 
 </section>
@@ -1496,26 +1457,18 @@ and Discrimination of Cosmetic Products
 
 <div class="container">
 
-
 <div class="approach-grid">
 
 
 <div>
 
-
 <div class="section-label">
-
 Our Approach
-
 </div>
 
-
 <h2>
-
 From measurement to evidence.
-
 </h2>
-
 
 <p class="section-intro">
 
@@ -1526,65 +1479,40 @@ chemical signals into evidence.
 
 </p>
 
-
 </div>
-
 
 
 <div class="workflow">
 
 
 <div class="workflow-item">
-
 <div class="workflow-number">1</div>
-
 <span>Define the analytical question</span>
-
 </div>
 
-
 <div class="workflow-item">
-
 <div class="workflow-number">2</div>
-
 <span>Acquire robust chemical measurements</span>
-
 </div>
 
-
 <div class="workflow-item">
-
 <div class="workflow-number">3</div>
-
 <span>Extract informative chemical features</span>
-
 </div>
 
-
 <div class="workflow-item">
-
 <div class="workflow-number">4</div>
-
 <span>Apply chemometrics and machine learning</span>
-
 </div>
 
-
 <div class="workflow-item">
-
 <div class="workflow-number">5</div>
-
 <span>Validate using complementary analytical evidence</span>
-
 </div>
 
-
 <div class="workflow-item">
-
 <div class="workflow-number">6</div>
-
 <span>Translate analytical evidence into decisions</span>
-
 </div>
 
 
@@ -1602,23 +1530,15 @@ chemical signals into evidence.
 
 <div class="container">
 
-
 <div class="join-box">
 
-
 <div class="section-label">
-
 Opportunities
-
 </div>
 
-
 <h2>
-
 Work with The Chapman Group
-
 </h2>
-
 
 <p>
 
@@ -1630,13 +1550,9 @@ and functional materials.
 
 </p>
 
-
 <a class="button-primary" href="#people">
-
 Meet the group
-
 </a>
-
 
 </div>
 
@@ -1653,30 +1569,21 @@ Meet the group
 
 <div class="footer-inner">
 
-
 <div>
 
 <div class="footer-title">
-
 The Nanobioanalytical Lab
-
 </div>
 
 <div class="footer-text">
-
 The Chapman Group
-
 </div>
 
 </div>
-
 
 <div class="footer-text">
-
 Analytical Chemistry · Griffith University · Australia
-
 </div>
-
 
 </div>
 
