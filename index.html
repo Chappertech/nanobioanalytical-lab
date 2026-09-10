@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>The Nanobioanalytical Lab | The Chapman Group</title>
 
 <meta name="description"
-content="The Nanobioanalytical Lab at Griffith University. Research in analytical chemistry, spectroscopy, chemometrics, artificial intelligence, circular materials, pharmaceuticals, antimicrobial materials and rapid diagnostics.">
+content="The Nanobioanalytical Lab at Griffith University. Research in analytical chemistry, spectroscopy, chemometrics, artificial intelligence, circular materials, emerging pharmaceuticals, antimicrobial materials and rapid diagnostics.">
 
 <style>
 
@@ -54,13 +53,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 35px;
 }
 
 .logo img {
-    width: 410px;
+    width: 400px;
     max-width: 100%;
-    height: 74px;
+    height: 72px;
     object-fit: contain;
     object-position: left center;
 }
@@ -68,7 +67,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 24px;
     font-size: 14px;
 }
 
@@ -149,7 +148,7 @@ h1 {
 }
 
 .hero-text {
-    max-width: 790px;
+    max-width: 800px;
     color: #c4d6de;
     font-size: 20px;
     line-height: 1.75;
@@ -214,7 +213,7 @@ h2 {
 }
 
 .section-intro {
-    max-width: 850px;
+    max-width: 870px;
     color: #aebfc8;
     font-size: 18px;
     margin-bottom: 55px;
@@ -234,20 +233,14 @@ h2 {
 }
 
 .research-card {
-    position: relative;
     overflow: hidden;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
         145deg,
         rgba(15,39,59,0.98),
         rgba(9,29,46,0.98)
-        );
-
+    );
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
-
-    min-height: 470px;
     transition: 0.25s;
 }
 
@@ -257,25 +250,25 @@ h2 {
 }
 
 .research-icon-area {
-    height: 215px;
+    height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     background:
         radial-gradient(circle,
-        rgba(103,216,235,0.09),
-        transparent 65%);
+        rgba(103,216,235,0.10),
+        transparent 67%);
 }
 
 .research-icon {
-    width: 185px;
-    height: 185px;
+    width: 195px;
+    height: 195px;
     object-fit: contain;
 }
 
 .research-content {
-    padding: 30px 34px 35px 34px;
+    padding: 30px 34px 38px;
 }
 
 .card-number {
@@ -286,7 +279,7 @@ h2 {
 }
 
 .research-card h3 {
-    font-size: 24px;
+    font-size: 25px;
     line-height: 1.2;
     margin-bottom: 16px;
 }
@@ -370,7 +363,7 @@ h2 {
     letter-spacing: 3px;
 }
 
-.people-heading:first-of-type {
+.people-heading.first {
     margin-top: 0;
 }
 
@@ -423,6 +416,14 @@ h2 {
     line-height: 1.55;
 }
 
+.current-work {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #8fa8b3;
+    font-size: 13px;
+}
+
 .person-themes {
     margin-top: 20px;
     display: flex;
@@ -441,7 +442,7 @@ h2 {
 }
 
 
-/* SILHOUETTES */
+/* SILHOUETTE */
 
 .silhouette {
     height: 300px;
@@ -452,12 +453,7 @@ h2 {
         radial-gradient(circle at 50% 35%,
         rgba(103,216,235,0.12),
         transparent 30%),
-
-        linear-gradient(
-        145deg,
-        #10283b,
-        #081827
-        );
+        linear-gradient(145deg,#10283b,#081827);
 
     display: flex;
     align-items: center;
@@ -488,6 +484,102 @@ h2 {
     left: 0;
     bottom: 0;
     background: #355268;
+}
+
+
+/* PUBLICATIONS */
+
+.publications {
+    background: #081827;
+}
+
+.publication-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+.publication-card {
+    padding: 30px;
+    background: rgba(8,31,49,0.90);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 13px;
+}
+
+.publication-type {
+    color: #67d8eb;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.publication-card h3 {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+}
+
+.publication-authors {
+    color: #bacbd2;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.publication-journal {
+    color: #829ca7;
+    font-size: 13px;
+}
+
+.publication-doi {
+    color: #67d8eb;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.in-preparation {
+    border-color: rgba(103,216,235,0.26);
+}
+
+
+/* FUNDING */
+
+.funding {
+    background: #06111f;
+}
+
+.funding-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.funding-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 12px;
+    background: #0c2032;
+    border: 1px solid rgba(103,216,235,0.17);
+}
+
+.funding-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    bottom: 25px;
+    width: 2px;
+    background: #67d8eb;
+}
+
+.funding-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.funding-card p {
+    color: #9fb3bc;
+    font-size: 14px;
 }
 
 
@@ -533,11 +625,9 @@ h2 {
     width: 40px;
     height: 40px;
     min-width: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
     color: #67d8eb;
     border: 1px solid rgba(103,216,235,0.40);
@@ -602,13 +692,15 @@ footer {
 
 /* TABLET */
 
-@media(max-width:1000px) {
+@media(max-width:1050px) {
 
     nav ul {
         display: none;
     }
 
-    .research-grid {
+    .research-grid,
+    .publication-grid,
+    .funding-grid {
         grid-template-columns: 1fr;
     }
 
@@ -627,7 +719,6 @@ footer {
     .approach-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -636,14 +727,11 @@ footer {
 @media(max-width:700px) {
 
     .logo img {
-        width: 300px;
-        height: 60px;
+        width: 290px;
+        height: 58px;
     }
 
-    .capability-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .capability-grid,
     .people-grid {
         grid-template-columns: 1fr;
     }
@@ -661,10 +749,9 @@ footer {
     }
 
     .research-icon {
-        width: 160px;
-        height: 160px;
+        width: 165px;
+        height: 165px;
     }
-
 }
 
 </style>
@@ -699,7 +786,8 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 <li><a href="#research">Research</a></li>
 <li><a href="#capabilities">Capabilities</a></li>
 <li><a href="#people">People</a></li>
-<li><a href="#approach">Approach</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#funding">Partners</a></li>
 <li><a href="#join">Join Us</a></li>
 
 </ul>
@@ -711,7 +799,6 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 </header>
 
 
-
 <main id="top">
 
 
@@ -720,15 +807,11 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 <div class="hero-inner">
 
 <div class="eyebrow">
-
 Analytical Chemistry · Spectroscopy · Chemometrics · Artificial Intelligence
-
 </div>
 
 <h1>
-
 Chemical information from complex systems.
-
 </h1>
 
 <p class="hero-text">
@@ -772,9 +855,9 @@ Analytical chemistry for emerging challenges.
 
 <p class="section-intro">
 
-Our research programmes connect advanced analytical measurement with
-chemometrics and artificial intelligence to address emerging challenges
-across health, materials, environmental science and manufacturing.
+Our research integrates advanced chemical measurement with chemometrics
+and artificial intelligence to develop rapid, robust and translatable
+analytical solutions.
 
 </p>
 
@@ -788,7 +871,7 @@ across health, materials, environmental science and manufacturing.
 
 <img
 class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(1).png"
+src="images/ChatGPT Image Sep 10, 2026, 10_09_47 AM (1).png"
 alt="AI-enabled rapid analytical diagnostics">
 
 </div>
@@ -804,8 +887,8 @@ AI-Enabled Rapid Analytical Diagnostics
 <p>
 
 We combine spectroscopy, chemometrics and machine learning to develop
-rapid analytical platforms for chemical identification, classification
-and quantitative prediction at the point of need.
+rapid analytical platforms for chemical identification, classification,
+quantification and decision making at the point of need.
 
 </p>
 
@@ -821,7 +904,7 @@ and quantitative prediction at the point of need.
 
 <img
 class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(2).png"
+src="images/ChatGPT Image Sep 10, 2026, 10_09_47 AM (2).png"
 alt="Circular materials and polymer analytics">
 
 </div>
@@ -837,9 +920,9 @@ Circular Materials and Polymer Analytics
 <p>
 
 We develop analytical methods for recycled and manufactured polymer
-systems, including material identification, recycled feedstock
-qualification, contamination detection, degradation assessment and
-circular-economy decision making.
+systems, including polymer identification, feedstock qualification,
+contamination detection, degradation assessment and circular-economy
+decision making.
 
 </p>
 
@@ -855,7 +938,7 @@ circular-economy decision making.
 
 <img
 class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_49%20AM%20(3).png"
+src="images/ChatGPT Image Sep 10, 2026, 10_09_49 AM (3).png"
 alt="Emerging pharmaceuticals peptides and sports integrity">
 
 </div>
@@ -888,7 +971,7 @@ screening technologies with complementary confirmatory analysis.
 
 <img
 class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_50%20AM%20(4).png"
+src="images/ChatGPT Image Sep 10, 2026, 10_09_50 AM (4).png"
 alt="AI-guided functional materials and biointerface engineering">
 
 </div>
@@ -936,10 +1019,11 @@ From chemical measurement to analytical evidence.
 
 <p class="section-intro">
 
-Our research integrates complementary analytical technologies with
-chemometrics, machine learning and rigorous validation.
+Our research combines complementary instrumentation with quantitative
+analysis, chemometrics, machine learning and rigorous validation.
 
 </p>
+
 
 <div class="capability-grid">
 
@@ -985,9 +1069,9 @@ Plastics and the Circular Economy
 
 <p>
 
-Developing rapid analytical methods for polymer identification,
-recycled feedstock quality, contamination, degradation and materials
-recovery across circular-economy and advanced-manufacturing systems.
+Rapid analytical methods for polymer identification, recycled feedstock
+quality, contamination, degradation and materials recovery across
+circular-economy and advanced-manufacturing systems.
 
 </p>
 
@@ -1002,9 +1086,9 @@ Emerging Drugs and Sports Integrity
 
 <p>
 
-Developing analytical capability for rapidly evolving pharmaceuticals,
-peptides and performance-modifying substances, with relevance to
-emerging sports-integrity challenges in the lead-up to Brisbane 2032.
+Analytical capability for rapidly evolving pharmaceuticals, peptides
+and performance-modifying substances, with relevance to emerging
+sports-integrity challenges approaching Brisbane 2032.
 
 </p>
 
@@ -1020,8 +1104,8 @@ Functional and Antimicrobial Materials
 <p>
 
 Understanding material-biology interactions and developing functional
-surfaces and materials designed to control microbial adhesion,
-biofilm formation and biofouling.
+surfaces and materials to control microbial adhesion, biofilm formation
+and biofouling.
 
 </p>
 
@@ -1058,12 +1142,11 @@ forensic chemistry and biomedical analysis.
 
 
 
-<div class="people-heading">
+<div class="people-heading first">
 Group Leader
 </div>
 
 <div class="people-grid">
-
 
 <div class="person-card">
 
@@ -1088,8 +1171,8 @@ Group Leader
 
 <div class="person-project">
 
-Analytical chemistry, spectroscopy, chemometrics, artificial intelligence,
-advanced materials and translational analytical science.
+Analytical chemistry, spectroscopy, chemometrics, artificial
+intelligence, advanced materials and translational analytical science.
 
 </div>
 
@@ -1105,7 +1188,6 @@ advanced materials and translational analytical science.
 
 </div>
 
-
 </div>
 
 
@@ -1115,7 +1197,6 @@ Postdoctoral Research Fellow
 </div>
 
 <div class="people-grid">
-
 
 <div class="person-card">
 
@@ -1157,7 +1238,6 @@ materials and emerging analytical applications.
 </div>
 
 </div>
-
 
 </div>
 
@@ -1229,6 +1309,11 @@ PhD Researcher
 Rapid Spectroscopic Characterisation of Medical Plastic Waste for
 Polymer Identification, Contamination Assessment and Circular-Economy Recovery
 
+</div>
+
+<div class="current-work">
+Current work: Review article in preparation on analytical characterisation
+and circular-economy recovery of medical plastic waste.
 </div>
 
 <div class="person-themes">
@@ -1376,7 +1461,7 @@ of Kidney Disease Biomarkers
 
 <img
 class="person-image"
-src="images/Lauren%20Bridger.jpeg"
+src="images/Lauren Bridger.jpeg"
 alt="Lauren Bridger">
 
 <div class="person-content">
@@ -1453,6 +1538,236 @@ and Discrimination of Cosmetic Products
 
 
 
+<section class="publications" id="publications">
+
+<div class="container">
+
+<div class="section-label">
+Selected Publications
+</div>
+
+<h2>
+Research outputs from the group.
+</h2>
+
+<p class="section-intro">
+
+Selected recent publications illustrate the group's work across
+AI-enabled diagnostics, spectroscopy, microplastics and circular materials.
+
+</p>
+
+
+<div class="publication-grid">
+
+
+<div class="publication-card">
+
+<div class="publication-type">
+Review Article · AI-Enabled Diagnostics
+</div>
+
+<h3>
+Artificial intelligence-enhanced near infrared (NIR) spectroscopy for rapid diagnostics of infectious diseases
+</h3>
+
+<div class="publication-authors">
+Chamodi Premasinghe · Chloe Broeckelmann · Adam Kolobaric · Daniel Cozzolino · James Chapman
+</div>
+
+<div class="publication-journal">
+Applied Spectroscopy Reviews · 61(6) · 570-597 · 2026
+</div>
+
+<div class="publication-doi">
+DOI: 10.1080/05704928.2025.2570816
+</div>
+
+</div>
+
+
+
+<div class="publication-card">
+
+<div class="publication-type">
+Review Article · Circular Materials
+</div>
+
+<h3>
+Plastics and persistent chemical contaminants in food waste: challenges for the circular economy
+</h3>
+
+<div class="publication-authors">
+Adam Kolobaric · Shanmugam Alagappan · Louwrens C. Hoffman · Daniel Cozzolino · James Chapman
+</div>
+
+<div class="publication-journal">
+Journal of Hazardous Materials Advances · 21 · 100996 · 2026
+</div>
+
+<div class="publication-doi">
+DOI: 10.1016/j.hazadv.2025.100996
+</div>
+
+</div>
+
+
+
+<div class="publication-card">
+
+<div class="publication-type">
+Research Article · Portable Spectroscopy
+</div>
+
+<h3>
+Analysis of marine plastic fragments using a portable near-infrared instrument: The effect of scanning position on the classification of polymer type
+</h3>
+
+<div class="publication-authors">
+Adam Kolobaric · Louwrens C. Hoffman · James Chapman · Daniel Cozzolino
+</div>
+
+<div class="publication-journal">
+Microchemical Journal · 226 · 118322 · 2026
+</div>
+
+<div class="publication-doi">
+DOI: 10.1016/j.microc.2026.118322
+</div>
+
+</div>
+
+
+
+<div class="publication-card in-preparation">
+
+<div class="publication-type">
+Current Manuscript · In Preparation
+</div>
+
+<h3>
+Medical plastic waste, analytical characterisation and circular-economy recovery
+</h3>
+
+<div class="publication-authors">
+Chloe Broeckelman and collaborators
+</div>
+
+<div class="publication-journal">
+Review article currently in preparation
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="funding" id="funding">
+
+<div class="container">
+
+<div class="section-label">
+Funding, Partnerships & Research Networks
+</div>
+
+<h2>
+Collaborative research at scale.
+</h2>
+
+<p class="section-intro">
+
+Our research is strengthened through major collaborative programmes,
+institutional partnerships and professional scientific networks.
+
+</p>
+
+
+<div class="funding-grid">
+
+
+<div class="funding-card">
+
+<h3>
+Solving Plastic Waste CRC
+</h3>
+
+<p>
+
+Collaborative research across polymer analytics, plastic waste,
+microplastics, resource recovery and Australia's transition towards
+a circular economy for plastics.
+
+</p>
+
+</div>
+
+
+
+<div class="funding-card">
+
+<h3>
+Additive Manufacturing CRC
+</h3>
+
+<p>
+
+Research connections across advanced manufacturing, polymer
+characterisation, recycled feedstocks and the development of
+next-generation materials.
+
+</p>
+
+</div>
+
+
+
+<div class="funding-card">
+
+<h3>
+Queensland Brain Institute
+</h3>
+
+<p>
+
+Collaborative translational research supporting emerging analytical,
+biosensing and biomedical applications.
+
+</p>
+
+</div>
+
+
+
+<div class="funding-card">
+
+<h3>
+Royal Society of Chemistry
+</h3>
+
+<p>
+
+Scientific engagement, professional networks and collaboration across
+analytical chemistry, materials chemistry and chemical measurement.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
 <section class="approach" id="approach">
 
 <div class="container">
@@ -1472,10 +1787,10 @@ From measurement to evidence.
 
 <p class="section-intro">
 
-Analytical signals are only valuable when they provide chemically meaningful,
-reproducible and defensible information. We integrate instrumental measurement,
-experimental design, quantitative analysis and data science to convert complex
-chemical signals into evidence.
+Analytical signals are only valuable when they provide chemically
+meaningful, reproducible and defensible information. We integrate
+instrumental measurement, experimental design, quantitative analysis
+and data science to convert complex chemical signals into evidence.
 
 </p>
 
@@ -1543,10 +1858,10 @@ Work with The Chapman Group
 <p>
 
 We welcome enquiries from prospective Honours and PhD researchers,
-visiting scientists, academic collaborators and industry partners
-interested in analytical chemistry, spectroscopy, artificial intelligence,
-circular materials, pharmaceutical analysis, antimicrobial materials
-and functional materials.
+postdoctoral researchers, visiting scientists, academic collaborators
+and industry partners interested in analytical chemistry, spectroscopy,
+artificial intelligence, circular materials, pharmaceutical analysis,
+antimicrobial materials and functional materials.
 
 </p>
 
