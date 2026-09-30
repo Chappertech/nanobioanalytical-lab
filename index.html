@@ -342,6 +342,184 @@ h2 {
 }
 
 
+/* OPEN PROJECTS */
+
+.open-projects {
+    background: #06111f;
+}
+
+.project-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-button {
+    border: 1px solid rgba(103,216,235,0.24);
+    background: rgba(12,45,65,0.72);
+    color: #cfe2e8;
+    padding: 10px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: #67d8eb;
+    color: #06111f;
+    border-color: #67d8eb;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.project-card {
+    position: relative;
+    padding: 28px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(15,39,59,0.98), rgba(9,29,46,0.98));
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.25s, border-color 0.25s, opacity 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(103,216,235,0.48);
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.project-status {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(103,216,235,0.28);
+    background: rgba(103,216,235,0.08);
+    color: #8de1ef;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #aebfc8;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.project-levels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.project-level {
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: rgba(103,216,235,0.08);
+    border: 1px solid rgba(103,216,235,0.16);
+    color: #bdebf2;
+    font-size: 11px;
+}
+
+.project-link {
+    color: #67d8eb;
+    font-size: 13px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* INTERACTIVE NETWORK */
+
+.network-person,
+.network-theme-group {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.network-person:hover .node-main,
+.network-person:hover .node-person,
+.network-theme-group:hover .node-theme,
+.network-person.active .node-main,
+.network-person.active .node-person,
+.network-theme-group.active .node-theme {
+    stroke: #ffffff;
+    stroke-width: 3.5;
+}
+
+.network-person.dimmed,
+.network-theme-group.dimmed {
+    opacity: 0.28;
+}
+
+.network-detail {
+    margin-top: 24px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(103,216,235,0.18);
+    background: rgba(7,28,45,0.72);
+}
+
+.network-detail-title {
+    color: #67d8eb;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.network-detail h3 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.network-detail p {
+    color: #aebfc8;
+    font-size: 14px;
+}
+
+
+/* REVEAL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* PEOPLE */
 
 .people {
@@ -865,6 +1043,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .project-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .people-grid {
         grid-template-columns: repeat(2,1fr);
     }
@@ -889,7 +1071,8 @@ footer {
     }
 
     .capability-grid,
-    .people-grid {
+    .people-grid,
+    .project-grid {
         grid-template-columns: 1fr;
     }
 
@@ -952,6 +1135,7 @@ alt="The Nanobioanalytical Lab, The Chapman Group">
 
 <ul>
 <li><a href="#research">Research</a></li>
+<li><a href="#projects">Open Projects</a></li>
 <li><a href="#capabilities">Capabilities</a></li>
 <li><a href="#people">People</a></li>
 <li><a href="#publications">Publications</a></li>
@@ -1272,9 +1456,108 @@ and biofouling.
 
 
 
+<section class="open-projects" id="projects">
+
+<div class="container reveal">
+
+<div class="section-label">
+Open Research Projects
+</div>
+
+<h2>
+Find a project that fits your interests.
+</h2>
+
+<p class="section-intro">
+We are currently discussing new Honours, Capstone and PhD projects across the group's major research programmes. The themes below are starting points and can be shaped around student background, analytical interests and available project scope.
+</p>
+
+<div class="project-filter" aria-label="Filter open projects by study level">
+<button class="filter-button active" type="button" data-filter="all">All projects</button>
+<button class="filter-button" type="button" data-filter="honours">Honours</button>
+<button class="filter-button" type="button" data-filter="capstone">Capstone</button>
+<button class="filter-button" type="button" data-filter="phd">PhD</button>
+</div>
+
+<div class="project-grid">
+
+<div class="project-card" data-levels="honours phd">
+<div class="project-status">Project discussions open</div>
+<h3>AI-Enabled Rapid Analytical Diagnostics</h3>
+<p>Develop spectroscopy and machine-learning workflows for rapid chemical classification, prediction and point-of-need analytical decision making.</p>
+<div class="project-levels">
+<span class="project-level">Honours</span>
+<span class="project-level">PhD</span>
+</div>
+<a class="project-link" href="mailto:james.chapman@griffith.edu.au?subject=Project%20enquiry%20-%20AI-Enabled%20Rapid%20Analytical%20Diagnostics">Enquire about this project</a>
+</div>
+
+<div class="project-card" data-levels="honours capstone phd">
+<div class="project-status">Project discussions open</div>
+<h3>Circular Plastics, Recyclates and Microplastics</h3>
+<p>Apply NIR, FTIR, hyperspectral imaging and chemometrics to polymer identification, contamination, degradation and circular-economy challenges.</p>
+<div class="project-levels">
+<span class="project-level">Honours</span>
+<span class="project-level">Capstone</span>
+<span class="project-level">PhD</span>
+</div>
+<a class="project-link" href="mailto:james.chapman@griffith.edu.au?subject=Project%20enquiry%20-%20Circular%20Plastics%20and%20Microplastics">Enquire about this project</a>
+</div>
+
+<div class="project-card" data-levels="honours phd">
+<div class="project-status">Project discussions open</div>
+<h3>Concussion Biomarker Analytics</h3>
+<p>Explore analytical strategies for concussion-related biomarkers within the group's translational work connected with the Queensland Brain Institute.</p>
+<div class="project-levels">
+<span class="project-level">Honours</span>
+<span class="project-level">PhD</span>
+</div>
+<a class="project-link" href="mailto:james.chapman@griffith.edu.au?subject=Project%20enquiry%20-%20Concussion%20Biomarker%20Analytics">Enquire about this project</a>
+</div>
+
+<div class="project-card" data-levels="honours phd">
+<div class="project-status">Project discussions open</div>
+<h3>Antimicrobial Materials and Biointerfaces</h3>
+<p>Investigate functional materials, microbial interactions, biofilm models and advanced chemical characterisation for healthcare applications.</p>
+<div class="project-levels">
+<span class="project-level">Honours</span>
+<span class="project-level">PhD</span>
+</div>
+<a class="project-link" href="mailto:james.chapman@griffith.edu.au?subject=Project%20enquiry%20-%20Antimicrobial%20Materials%20and%20Biointerfaces">Enquire about this project</a>
+</div>
+
+<div class="project-card" data-levels="honours capstone">
+<div class="project-status">Project discussions open</div>
+<h3>Forensic and Pharmaceutical Spectroscopy</h3>
+<p>Use rapid spectroscopic fingerprinting and multivariate analysis for forensic discrimination, pharmaceutical screening and complex chemical samples.</p>
+<div class="project-levels">
+<span class="project-level">Honours</span>
+<span class="project-level">Capstone</span>
+</div>
+<a class="project-link" href="mailto:james.chapman@griffith.edu.au?subject=Project%20enquiry%20-%20Forensic%20and%20Pharmaceutical%20Spectroscopy">Enquire about this project</a>
+</div>
+
+<div class="project-card" data-levels="capstone honours">
+<div class="project-status">Project discussions open</div>
+<h3>Food and Beverage Chemometrics</h3>
+<p>Develop practical spectroscopy and chemometric workflows for complex food and beverage matrices, authentication, classification and quality assessment.</p>
+<div class="project-levels">
+<span class="project-level">Capstone</span>
+<span class="project-level">Honours</span>
+</div>
+<a class="project-link" href="mailto:james.chapman@griffith.edu.au?subject=Project%20enquiry%20-%20Food%20and%20Beverage%20Chemometrics">Enquire about this project</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
 <section class="people" id="people">
 
-<div class="container">
+<div class="container reveal">
 
 <div class="section-label">
 Our People
@@ -1660,7 +1943,7 @@ and Discrimination of Cosmetic Products
 
 <section class="publications" id="publications">
 
-<div class="container">
+<div class="container reveal">
 
 <div class="section-label">
 Selected Publications
@@ -1825,126 +2108,77 @@ aria-label="Nanobioanalytical Lab collaboration network">
 <line class="line-theme" x1="600" y1="350" x2="145" y2="620"/>
 
 
+<g class="network-person" data-network-key="james" tabindex="0" role="button" aria-label="James Chapman">
 <circle class="node-main" cx="600" cy="350" r="82"/>
-
-<text class="node-text" x="600" y="342">
-James
-</text>
-
-<text class="node-text" x="600" y="363">
-Chapman
-</text>
-
-<text class="node-sub" x="600" y="390">
-Group Leader
-</text>
+<text class="node-text" x="600" y="342">James</text>
+<text class="node-text" x="600" y="363">Chapman</text>
+<text class="node-sub" x="600" y="390">Group Leader</text>
+</g>
 
 
+<g class="network-person" data-network-key="abid" tabindex="0" role="button" aria-label="Abid Farooq">
 <circle class="node-main" cx="925" cy="270" r="65"/>
-
-<text class="node-text" x="925" y="263">
-Abid
-</text>
-
-<text class="node-text" x="925" y="284">
-Farooq
-</text>
-
-<text class="node-sub" x="925" y="307">
-Postdoctoral Fellow
-</text>
+<text class="node-text" x="925" y="263">Abid</text>
+<text class="node-text" x="925" y="284">Farooq</text>
+<text class="node-sub" x="925" y="307">Postdoctoral Fellow</text>
+</g>
 
 
+<g class="network-person" data-network-key="oanh" tabindex="0" role="button" aria-label="Oanh Le">
 <circle class="node-main" cx="1040" cy="350" r="65"/>
-
-<text class="node-text" x="1040" y="343">
-Oanh
-</text>
-
-<text class="node-text" x="1040" y="364">
-Le
-</text>
-
-<text class="node-sub" x="1040" y="387">
-QBI Biomarkers
-</text>
+<text class="node-text" x="1040" y="343">Oanh</text>
+<text class="node-text" x="1040" y="364">Le</text>
+<text class="node-sub" x="1040" y="387">QBI Biomarkers</text>
+</g>
 
 
+<g class="network-person" data-network-key="adam" tabindex="0" role="button" aria-label="Adam Kolobaric">
 <circle class="node-person" cx="330" cy="190" r="58"/>
-
-<text class="node-text" x="330" y="187">
-Adam
-</text>
-
-<text class="node-sub" x="330" y="209">
-Microplastics
-</text>
+<text class="node-text" x="330" y="187">Adam</text>
+<text class="node-sub" x="330" y="209">Microplastics</text>
+</g>
 
 
+<g class="network-person" data-network-key="chamodi" tabindex="0" role="button" aria-label="Chamodi Premasinghe">
 <circle class="node-person" cx="515" cy="135" r="58"/>
-
-<text class="node-text" x="515" y="132">
-Chamodi
-</text>
-
-<text class="node-sub" x="515" y="154">
-Antimicrobials
-</text>
+<text class="node-text" x="515" y="132">Chamodi</text>
+<text class="node-sub" x="515" y="154">Antimicrobials</text>
+</g>
 
 
+<g class="network-person" data-network-key="chloe" tabindex="0" role="button" aria-label="Chloe Broeckelman">
 <circle class="node-person" cx="765" cy="165" r="58"/>
-
-<text class="node-text" x="765" y="162">
-Chloe
-</text>
-
-<text class="node-sub" x="765" y="184">
-Medical Plastics
-</text>
+<text class="node-text" x="765" y="162">Chloe</text>
+<text class="node-sub" x="765" y="184">Medical Plastics</text>
+</g>
 
 
+<g class="network-person" data-network-key="william" tabindex="0" role="button" aria-label="William Morran">
 <circle class="node-person" cx="935" cy="465" r="58"/>
-
-<text class="node-text" x="935" y="462">
-William
-</text>
-
-<text class="node-sub" x="935" y="484">
-Capstone · Beer Matrices
-</text>
+<text class="node-text" x="935" y="462">William</text>
+<text class="node-sub" x="935" y="484">Capstone · Beer Matrices</text>
+</g>
 
 
+<g class="network-person" data-network-key="lauren" tabindex="0" role="button" aria-label="Lauren Bridger">
 <circle class="node-person" cx="315" cy="455" r="55"/>
-
-<text class="node-text" x="315" y="452">
-Lauren
-</text>
-
-<text class="node-sub" x="315" y="474">
-Plastic Recyclates
-</text>
+<text class="node-text" x="315" y="452">Lauren</text>
+<text class="node-sub" x="315" y="474">Plastic Recyclates</text>
+</g>
 
 
+<g class="network-person" data-network-key="brittany" tabindex="0" role="button" aria-label="Brittany De Jong">
 <circle class="node-person" cx="475" cy="565" r="55"/>
-
-<text class="node-text" x="475" y="562">
-Brittany
-</text>
-
-<text class="node-sub" x="475" y="584">
-Biosensing
-</text>
+<text class="node-text" x="475" y="562">Brittany</text>
+<text class="node-sub" x="475" y="584">Biosensing</text>
+</g>
 
 
+<g class="network-person" data-network-key="jacqulyn" tabindex="0" role="button" aria-label="Jacqulyn Wonnocott">
 <circle class="node-person" cx="750" cy="565" r="55"/>
-
-<text class="node-text" x="750" y="562">
-Jacqulyn
-</text>
-
-<text class="node-sub" x="750" y="584">
-Forensics
-</text>
+<text class="node-text" x="750" y="562">Jacqulyn</text>
+<text class="node-sub" x="750" y="584">Forensics</text>
+</g>
 
 
 <rect
@@ -2027,6 +2261,12 @@ a formal bibliometric analysis.
 
 </p>
 
+<div class="network-detail" id="network-detail" aria-live="polite">
+<div class="network-detail-title">Interactive network</div>
+<h3>Select a researcher</h3>
+<p>Click or use the keyboard to select a researcher and see their primary connection to the group's research programmes.</p>
+</div>
+
 </div>
 
 </div>
@@ -2037,7 +2277,7 @@ a formal bibliometric analysis.
 
 <section class="funding" id="funding">
 
-<div class="container">
+<div class="container reveal">
 
 <div class="section-label">
 Funding, Partnerships & Research Networks
@@ -2297,6 +2537,114 @@ Analytical Chemistry · Griffith University · Australia
 
 </footer>
 
+
+<script>
+(function () {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+            filterButtons.forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+
+            projectCards.forEach(card => {
+                const levels = (card.dataset.levels || '').split(' ');
+                card.classList.toggle('hidden', filter !== 'all' && !levels.includes(filter));
+            });
+        });
+    });
+
+    const networkData = {
+        james: {
+            title: 'Dr James Chapman',
+            text: 'Group Leader spanning analytical chemistry, spectroscopy, chemometrics, artificial intelligence, advanced materials and translational analytical science.'
+        },
+        abid: {
+            title: 'Abid Farooq',
+            text: 'Postdoctoral Research Fellow providing cross-programme research leadership across rapid diagnostics, spectroscopy, chemometrics and circular materials.'
+        },
+        oanh: {
+            title: 'Dr Oanh Le',
+            text: 'Postdoctoral Research Assistant working on the Queensland Brain Institute concussion biomarker project and translational biomarker analytics.'
+        },
+        adam: {
+            title: 'Adam Kolobaric',
+            text: 'PhD research focused on rapid spectroscopic detection and characterisation of microplastics, nanoplastics and associated chemical additives.'
+        },
+        chamodi: {
+            title: 'Chamodi Premasinghe',
+            text: 'PhD research focused on antimicrobial materials, biointerfaces and hospital-relevant biofilm models.'
+        },
+        chloe: {
+            title: 'Chloe Broeckelman',
+            text: 'PhD research focused on rapid spectroscopic characterisation of medical plastic waste, contamination and circular-economy recovery.'
+        },
+        william: {
+            title: 'William Morran',
+            text: 'Capstone research applying spectroscopy and chemometrics to complex beer matrices.'
+        },
+        lauren: {
+            title: 'Lauren Bridger',
+            text: 'Honours research applying AI-enabled analytical methods to plastic recyclates and circular-economy applications.'
+        },
+        brittany: {
+            title: 'Brittany De Jong',
+            text: 'Honours research developing rapid spectroscopic biosensing methods for kidney disease biomarkers.'
+        },
+        jacqulyn: {
+            title: 'Jacqulyn Wonnocott',
+            text: 'Honours research developing rapid spectroscopic methods for forensic analysis and discrimination of cosmetic products.'
+        }
+    };
+
+    const nodes = document.querySelectorAll('.network-person');
+    const detail = document.getElementById('network-detail');
+
+    function selectNetworkNode(node) {
+        const key = node.dataset.networkKey;
+        const data = networkData[key];
+        if (!data || !detail) return;
+
+        nodes.forEach(n => {
+            n.classList.toggle('active', n === node);
+            n.classList.toggle('dimmed', n !== node);
+        });
+
+        detail.innerHTML =
+            '<div class="network-detail-title">Selected researcher</div>' +
+            '<h3>' + data.title + '</h3>' +
+            '<p>' + data.text + '</p>';
+    }
+
+    nodes.forEach(node => {
+        node.addEventListener('click', () => selectNetworkNode(node));
+        node.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                selectNetworkNode(node);
+            }
+        });
+    });
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(item => observer.observe(item));
+    } else {
+        revealItems.forEach(item => item.classList.add('visible'));
+    }
+})();
+</script>
 
 </body>
 
