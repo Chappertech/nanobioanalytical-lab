@@ -1,7 +1,7 @@
 import json
 import urllib.parse
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 
 # ----------------------------------------------------------
 # THE CHAPMAN GROUP
@@ -11,14 +11,37 @@ from datetime import datetime
 OPENALEX_AUTHOR_ID = "A5027681613"
 
 # Only show publications from this year onwards.
-# Change this later if you want more historical publications.
 START_YEAR = 2022
 
 OUTPUT_FILE = "publications.json"
 
+GOOGLE_SCHOLAR_URL = (
+    "https://scholar.google.com.au/"
+    "citations?user=3I7cP7YAAAAJ&hl=en"
+)
+
+# Publication types that we want to display.
+ALLOWED_TYPES = {
+    "article",
+    "review",
+    "book-chapter",
+}
+
+# Individual OpenAlex records that should never appear.
+EXCLUDED_OPENALEX_IDS = {
+    # Unrelated imaging/computer science publication
+    "W4387211604",
+}
+
+# Titles containing these phrases will not be displayed.
+EXCLUDED_TITLE_PHRASES = {
+    "author response",
+    "list of contributors",
+}
+
 
 def get_publications():
-    """Download publications for James Chapman from OpenAlex."""
+    """Download publications from OpenAlex."""
 
     filter_string = (
         f"author.id:{OPENALEX_AUTHOR_ID},"
@@ -39,21 +62,67 @@ def get_publications():
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent":
-                "The-Chapman-Group-Publication-Updater"
+            "User-Agent": "Chapman-Group-Publication-Updater/1.0"
         }
     )
 
-    with urllib.request.urlopen(request, timeout=30) as response:
-        data = json.loads(response.read().decode("utf-8"))
+    with urllib.request.urlopen(
+        request,
+        timeout=30
+    ) as response:
+        data = json.loads(
+            response.read().decode("utf-8")
+        )
 
     return data.get("results", [])
 
 
-def clean_publication(work):
-    """Convert OpenAlex information into data for the website."""
+def normalise_openalex_id(openalex_id):
+    """Return only the W-number from an OpenAlex URL."""
 
-    title = work.get("display_name") or "Untitled publication"
+    if not openalex_id:
+        return ""
+
+    return openalex_id.rstrip("/").split("/")[-1]
+
+
+def should_include(work):
+    """Decide whether a record belongs on the website."""
+
+    publication_type = work.get("type") or ""
+
+    # Only display selected publication types.
+    if publication_type not in ALLOWED_TYPES:
+        return False
+
+    # Remove manually excluded OpenAlex records.
+    openalex_id = normalise_openalex_id(
+        work.get("id")
+    )
+
+    if openalex_id in EXCLUDED_OPENALEX_IDS:
+        return False
+
+    # Remove unwanted records using title phrases.
+    title = (
+        work.get("display_name") or ""
+    ).lower()
+
+    for phrase in EXCLUDED_TITLE_PHRASES:
+        if phrase in title:
+            return False
+
+    return True
+
+
+def clean_publication(work):
+    """Convert OpenAlex information into website data."""
+
+    title = (
+        work.get("display_name")
+        or "Untitled publication"
+    )
+
     year = work.get("publication_year")
     publication_date = work.get("publication_date")
 
@@ -67,26 +136,48 @@ def clean_publication(work):
         if name:
             authors.append(name)
 
-    # Journal / source
-    journal = ""
+    # Journal/source
+    primary_location = (
+        work.get("primary_location")
+        or {}
+    )
 
-    primary_location = work.get("primary_location") or {}
-    source = primary_location.get("source") or {}
+    source = (
+        primary_location.get("source")
+        or {}
+    )
 
-    if source:
-        journal = source.get("display_name") or ""
+    journal = (
+        source.get("display_name")
+        or ""
+    )
 
     # DOI
     doi = work.get("doi")
 
     if doi:
-        doi = doi.replace("https://doi.org/", "")
+        doi = doi.replace(
+            "https://doi.org/",
+            ""
+        )
 
-    # OpenAlex publication type
-    publication_type = work.get("type") or "article"
+    publication_type = (
+        work.get("type")
+        or "article"
+    )
 
-    # Citation count
-    cited_by_count = work.get("cited_by_count", 0)
+    type_labels = {
+        "article": "Journal Article",
+        "review": "Review Article",
+        "book-chapter": "Book Chapter",
+    }
+
+    type_label = type_labels.get(
+        publication_type,
+        publication_type.replace(
+            "-", " "
+        ).title()
+    )
 
     return {
         "title": title,
@@ -96,41 +187,109 @@ def clean_publication(work):
         "publication_date": publication_date,
         "doi": doi,
         "type": publication_type,
-        "citations": cited_by_count,
+        "type_label": type_label,
+        "citations": work.get("cited_by_count", 0),
         "openalex": work.get("id"),
     }
 
 
+def deduplicate(publications):
+    """
+    Remove duplicate records.
+
+    DOI is used as the main identifier.
+    If there is no DOI, the title is used instead.
+    """
+
+    seen = set()
+    cleaned = []
+
+    for publication in publications:
+
+        doi = publication.get("doi")
+
+        if doi:
+            key = (
+                "doi",
+                doi.lower().strip()
+            )
+
+        else:
+            title = publication.get("title") or ""
+
+            normalised_title = (
+                " ".join(
+                    title.lower().split()
+                )
+            )
+
+            key = (
+                "title",
+                normalised_title
+            )
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        cleaned.append(publication)
+
+    return cleaned
+
+
 def main():
+    """Create the cleaned publications.json file."""
 
     print("Checking OpenAlex for publications...")
 
     works = get_publications()
 
+    print(
+        f"OpenAlex returned {len(works)} records."
+    )
+
     publications = []
 
     for work in works:
+
+        if not should_include(work):
+            continue
+
         publication = clean_publication(work)
 
         if publication["year"]:
             publications.append(publication)
 
-    # Newest first
+    # Remove duplicates
+    publications = deduplicate(publications)
+
+    # Newest publications first
     publications.sort(
         key=lambda x: (
             x.get("publication_date") or "",
-            x.get("year") or 0
+            x.get("title") or ""
         ),
         reverse=True,
     )
 
+    # Count publications by year
+    years = {}
+
+    for publication in publications:
+
+        year = str(publication["year"])
+
+        years[year] = years.get(year, 0) + 1
+
     output = {
         "author": "James Chapman",
         "openalex_author_id": OPENALEX_AUTHOR_ID,
-        "google_scholar":
-            "https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&hl=en",
-        "last_updated": datetime.utcnow().isoformat() + "Z",
+        "google_scholar": GOOGLE_SCHOLAR_URL,
+        "last_updated": datetime.now(
+            timezone.utc
+        ).isoformat(),
         "publication_count": len(publications),
+        "publications_by_year": years,
         "publications": publications,
     }
 
@@ -139,6 +298,7 @@ def main():
         "w",
         encoding="utf-8"
     ) as file:
+
         json.dump(
             output,
             file,
@@ -147,7 +307,8 @@ def main():
         )
 
     print(
-        f"Done. Saved {len(publications)} publications "
+        f"Finished. Saved "
+        f"{len(publications)} clean publications "
         f"to {OUTPUT_FILE}."
     )
 
