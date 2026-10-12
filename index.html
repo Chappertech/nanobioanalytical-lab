@@ -92,19 +92,21 @@ nav a:hover {
     overflow: hidden;
 
     background:
-        radial-gradient(circle at 83% 38%,
-        rgba(0,180,220,0.18),
-        transparent 30%),
-
-        radial-gradient(circle at 20% 75%,
-        rgba(26,92,160,0.18),
-        transparent 34%),
-
+        radial-gradient(
+            circle at 83% 38%,
+            rgba(0,180,220,0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 75%,
+            rgba(26,92,160,0.18),
+            transparent 34%
+        ),
         linear-gradient(
-        135deg,
-        #06111f 0%,
-        #091d32 60%,
-        #062536 100%
+            135deg,
+            #06111f 0%,
+            #091d32 60%,
+            #062536 100%
         );
 }
 
@@ -256,9 +258,11 @@ h2 {
     align-items: center;
     justify-content: center;
     background:
-        radial-gradient(circle,
-        rgba(103,216,235,0.10),
-        transparent 67%);
+        radial-gradient(
+            circle,
+            rgba(103,216,235,0.10),
+            transparent 67%
+        );
 }
 
 .research-icon {
@@ -389,8 +393,6 @@ h2 {
     background: #0a1928;
 }
 
-/* Individual photo positioning */
-
 .james-photo {
     height: 380px;
     object-position: center top;
@@ -436,10 +438,6 @@ h2 {
     color: #67d8eb;
 }
 
-.person-email a:hover {
-    text-decoration: underline;
-}
-
 .current-work {
     margin-top: 16px;
     padding-top: 14px;
@@ -473,9 +471,11 @@ h2 {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(circle at 50% 35%,
-        rgba(103,216,235,0.12),
-        transparent 30%),
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(103,216,235,0.12),
+            transparent 30%
+        ),
         linear-gradient(145deg,#10283b,#081827);
 
     display: flex;
@@ -516,6 +516,46 @@ h2 {
     background: #081827;
 }
 
+.publication-buttons {
+    margin-top: -20px;
+    margin-bottom: 48px;
+}
+
+.publication-status {
+    color: #829ca7;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.publication-year-block {
+    margin-top: 60px;
+}
+
+.publication-year-block:first-child {
+    margin-top: 0;
+}
+
+.publication-year-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(103,216,235,0.25);
+}
+
+.publication-year-heading h3 {
+    color: #67d8eb;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.publication-year-count {
+    color: #819ba6;
+    font-size: 13px;
+}
+
 .publication-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -527,6 +567,13 @@ h2 {
     background: rgba(8,31,49,0.90);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 13px;
+    position: relative;
+    transition: 0.25s;
+}
+
+.publication-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(103,216,235,0.40);
 }
 
 .publication-type {
@@ -549,13 +596,41 @@ h2 {
     margin-bottom: 10px;
 }
 
+.publication-authors strong {
+    color: #ffffff;
+}
+
 .publication-journal {
     color: #829ca7;
     font-size: 13px;
 }
 
-.in-preparation {
-    border-color: rgba(103,216,235,0.28);
+.publication-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #67d8eb;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.publication-link:hover {
+    color: #91e6f2;
+    text-decoration: underline;
+}
+
+.publication-citations {
+    display: inline-block;
+    margin-left: 15px;
+    color: #829ca7;
+    font-size: 12px;
+}
+
+.publication-error {
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(8,31,49,0.90);
+    color: #aebfc8;
 }
 
 
@@ -570,9 +645,11 @@ h2 {
     border-radius: 16px;
     border: 1px solid rgba(103,216,235,0.20);
     background:
-        radial-gradient(circle at center,
-        rgba(103,216,235,0.07),
-        transparent 55%),
+        radial-gradient(
+            circle at center,
+            rgba(103,216,235,0.07),
+            transparent 55%
+        ),
         #091a29;
 }
 
@@ -758,7 +835,8 @@ h2 {
     margin-bottom: 30px;
 }
 
-.recruitment-badge {
+.recruitment-badge,
+.hero-recruitment {
     display: inline-block;
     margin-bottom: 18px;
     padding: 8px 13px;
@@ -769,6 +847,10 @@ h2 {
     font-size: 12px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+}
+
+.hero-recruitment {
+    margin-bottom: 22px;
 }
 
 .opportunity-grid {
@@ -788,7 +870,6 @@ h2 {
 .opportunity-card h3 {
     margin-bottom: 8px;
     font-size: 17px;
-    color: #ffffff;
 }
 
 .opportunity-card p {
@@ -796,19 +877,6 @@ h2 {
     font-size: 14px;
     line-height: 1.55;
     color: #9fb3bc;
-}
-
-.hero-recruitment {
-    display: inline-block;
-    margin-bottom: 22px;
-    padding: 8px 13px;
-    border-radius: 999px;
-    border: 1px solid rgba(103,216,235,0.30);
-    background: rgba(103,216,235,0.08);
-    color: #8de1ef;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
 }
 
 
@@ -921,51 +989,47 @@ footer {
     .jacqulyn-photo {
         height: 330px;
     }
+
+    .publication-year-heading {
+        align-items: flex-end;
+    }
+
+    .publication-year-heading h3 {
+        font-size: 28px;
+    }
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
 <div class="nav">
 
 <div class="logo">
-
-<a href="#top">
-
-<img
-src="Nanobioanal%20logo.png"
-alt="The Nanobioanalytical Lab, The Chapman Group">
-
+#top
+Nanobioanal%20logo.png
 </a>
-
 </div>
 
-
 <nav>
-
 <ul>
-<li><a href="#research">Research</a></li>
-<li><a href="#capabilities">Capabilities</a></li>
-<li><a href="#people">People</a></li>
-<li><a href="#publications">Publications</a></li>
-<li><a href="#collaboration">Network</a></li>
-<li><a href="#funding">Partners</a></li>
-<li><a href="#join">Join Us</a></li>
+<li>#researchResearch</a></li>
+<li>#capabilitiesCapabilities</a></li>
+<li>#peoplePeople</a></li>
+<li>#publicationsPublications</a></li>
+<li>#collaborationNetwork</a></li>
+<li>#fundingPartners</a></li>
+<li>#joinJoin Us</a></li>
 </ul>
-
 </nav>
 
 </div>
 
 </header>
-
 
 
 <main id="top">
@@ -988,21 +1052,19 @@ Chemical information from complex systems.
 </h1>
 
 <p class="hero-text">
-
 The Nanobioanalytical Lab develops advanced analytical technologies
 combining spectroscopy, chemometrics, artificial intelligence and
 complementary chemical analysis to solve emerging challenges across
 health, materials, environmental science and advanced manufacturing.
-
 </p>
 
 <div class="buttons">
 
-<a class="button-primary" href="#research">
+#research
 Explore our research
 </a>
 
-<a class="button-secondary" href="#people">
+#people
 Meet the group
 </a>
 
@@ -1011,7 +1073,6 @@ Meet the group
 </div>
 
 </section>
-
 
 
 <section class="research" id="research">
@@ -1027,26 +1088,18 @@ Analytical chemistry for emerging challenges.
 </h2>
 
 <p class="section-intro">
-
 Our research integrates advanced chemical measurement with chemometrics
 and artificial intelligence to develop rapid, robust and translatable
 analytical solutions.
-
 </p>
 
-
 <div class="research-grid">
-
 
 <div class="research-card">
 
 <div class="research-icon-area">
-
-<img
-class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(1).png"
+png"
 alt="AI-enabled rapid analytical diagnostics">
-
 </div>
 
 <div class="research-content">
@@ -1064,20 +1117,14 @@ quantification and decision making at the point of need.
 </p>
 
 </div>
-
 </div>
-
 
 
 <div class="research-card">
 
 <div class="research-icon-area">
-
-<img
-class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_47%20AM%20(2).png"
+png"
 alt="Circular materials and polymer analytics">
-
 </div>
 
 <div class="research-content">
@@ -1096,20 +1143,14 @@ decision making.
 </p>
 
 </div>
-
 </div>
-
 
 
 <div class="research-card">
 
 <div class="research-icon-area">
-
-<img
-class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_49%20AM%20(3).png"
+png"
 alt="Emerging pharmaceuticals peptides and sports integrity">
-
 </div>
 
 <div class="research-content">
@@ -1127,20 +1168,14 @@ screening technologies with complementary confirmatory analysis.
 </p>
 
 </div>
-
 </div>
-
 
 
 <div class="research-card">
 
 <div class="research-icon-area">
-
-<img
-class="research-icon"
-src="images/ChatGPT%20Image%20Sep%2010,%202026,%2010_09_50%20AM%20(4).png"
+png"
 alt="AI-guided functional materials and biointerface engineering">
-
 </div>
 
 <div class="research-content">
@@ -1158,16 +1193,12 @@ with controlled chemical, antimicrobial and antifouling properties.
 </p>
 
 </div>
-
 </div>
 
-
 </div>
-
 </div>
 
 </section>
-
 
 
 <section class="capabilities" id="capabilities">
@@ -1203,7 +1234,6 @@ analysis, chemometrics, machine learning and rigorous validation.
 </div>
 
 </section>
-
 
 
 <section class="applications">
@@ -1271,7 +1301,6 @@ and biofouling.
 </section>
 
 
-
 <section class="people" id="people">
 
 <div class="container">
@@ -1291,7 +1320,6 @@ forensic chemistry and biomedical analysis.
 </p>
 
 
-
 <div class="people-heading first">
 Group Leader
 </div>
@@ -1300,10 +1328,7 @@ Group Leader
 
 <div class="person-card">
 
-<img
-class="person-image james-photo"
-src="images/Dr%20James%20Chapman_Group%20Leader%20Nanobioanalytical.png"
-alt="Dr James Chapman">
+images/Dr%20James%20Chapman_Group%20Leader%20Nanobioanalytical.png
 
 <div class="person-content">
 
@@ -1333,11 +1358,9 @@ james.chapman@griffith.edu.au
 </div>
 
 </div>
-
 </div>
 
 </div>
-
 
 
 <div class="people-heading">
@@ -1349,12 +1372,10 @@ Postdoctoral Research Fellow
 <div class="person-card">
 
 <div class="silhouette">
-
 <div class="silhouette-person">
 <div class="silhouette-head"></div>
 <div class="silhouette-body"></div>
 </div>
-
 </div>
 
 <div class="person-content">
@@ -1374,15 +1395,12 @@ materials and emerging analytical applications.
 </div>
 
 </div>
-
 </div>
+
 
 <div class="person-card">
 
-<img
-class="person-image oanh-photo"
-src="images/Oanh%20Le.jpeg"
-alt="Dr Oanh Le">
+images/Oanh%20Le.jpeg
 
 <div class="person-content">
 
@@ -1395,7 +1413,8 @@ Postdoctoral Research Assistant
 </div>
 
 <div class="person-project">
-Queensland Brain Institute concussion biomarker project, supporting the development and validation of analytical approaches for concussion-related biomarkers.
+Queensland Brain Institute concussion biomarker project, supporting the
+development and validation of analytical approaches for concussion-related biomarkers.
 </div>
 
 <div class="person-themes">
@@ -1405,11 +1424,9 @@ Queensland Brain Institute concussion biomarker project, supporting the developm
 </div>
 
 </div>
-
 </div>
 
 </div>
-
 
 
 <div class="people-heading">
@@ -1421,10 +1438,7 @@ PhD Researchers
 
 <div class="person-card">
 
-<img
-class="person-image"
-src="images/Chamodi.jpeg"
-alt="Chamodi Premasinghe">
+images/Chamodi.jpeg
 
 <div class="person-content">
 
@@ -1442,17 +1456,12 @@ Hospital Applications Using a Diabetic Foot Ulcer Biofilm Model
 </div>
 
 </div>
-
 </div>
-
 
 
 <div class="person-card">
 
-<img
-class="person-image"
-src="images/chloe.jpg"
-alt="Chloe Broeckelman">
+images/chloe.jpg
 
 <div class="person-content">
 
@@ -1475,17 +1484,12 @@ and circular-economy recovery of medical plastic waste.
 </div>
 
 </div>
-
 </div>
-
 
 
 <div class="person-card">
 
-<img
-class="person-image"
-src="images/Adam.jpg"
-alt="Adam Kolobaric">
+images/Adam.jpg
 
 <div class="person-content">
 
@@ -1503,12 +1507,9 @@ Nanoplastics and Associated Chemical Additives in Food-Waste Matrices
 </div>
 
 </div>
-
 </div>
 
-
 </div>
-
 
 
 <div class="people-heading">
@@ -1520,12 +1521,10 @@ Capstone Students
 <div class="person-card">
 
 <div class="silhouette">
-
 <div class="silhouette-person">
 <div class="silhouette-head"></div>
 <div class="silhouette-body"></div>
 </div>
-
 </div>
 
 <div class="person-content">
@@ -1545,15 +1544,13 @@ Spectroscopic and Chemometric Characterisation of Complex Beer Matrices
 <div class="person-themes">
 <span class="theme-pill">Spectroscopy</span>
 <span class="theme-pill">Chemometrics</span>
-<span class="theme-pill">Food & Beverage Analysis</span>
+<span class="theme-pill">Food &amp; Beverage Analysis</span>
 </div>
 
 </div>
-
 </div>
 
 </div>
-
 
 
 <div class="people-heading">
@@ -1566,12 +1563,10 @@ Honours Researchers
 <div class="person-card">
 
 <div class="silhouette">
-
 <div class="silhouette-person">
 <div class="silhouette-head"></div>
 <div class="silhouette-body"></div>
 </div>
-
 </div>
 
 <div class="person-content">
@@ -1590,17 +1585,12 @@ of Kidney Disease Biomarkers
 </div>
 
 </div>
-
 </div>
-
 
 
 <div class="person-card">
 
-<img
-class="person-image"
-src="images/Lauren%20Bridger.jpeg"
-alt="Lauren Bridger">
+images/Lauren%20Bridger.jpeg
 
 <div class="person-content">
 
@@ -1618,17 +1608,12 @@ Circular-Economy Applications
 </div>
 
 </div>
-
 </div>
-
 
 
 <div class="person-card">
 
-<img
-class="person-image jacqulyn-photo"
-src="images/Jacqui.jpg"
-alt="Jacqulyn Wonnocott">
+images/Jacqui.jpg
 
 <div class="person-content">
 
@@ -1646,9 +1631,7 @@ and Discrimination of Cosmetic Products
 </div>
 
 </div>
-
 </div>
-
 
 </div>
 
@@ -1657,121 +1640,50 @@ and Discrimination of Cosmetic Products
 </section>
 
 
+<!-- AUTOMATIC PUBLICATIONS -->
 
 <section class="publications" id="publications">
 
 <div class="container">
 
 <div class="section-label">
-Selected Publications
+Publications
 </div>
 
 <h2>
-Research outputs from the group.
+Research outputs from The Chapman Group.
 </h2>
 
 <p class="section-intro">
-Selected recent publications illustrate work across AI-enabled diagnostics,
-spectroscopy, microplastics and circular materials.
+Recent publications are automatically updated from OpenAlex
+and organised by year.
 </p>
 
+<div class="buttons publication-buttons">
 
-<div class="publication-grid">
+https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&amp;hl=en
+View Google Scholar ↗
+</a>
 
-
-<div class="publication-card">
-
-<div class="publication-type">
-Review Article · AI-Enabled Diagnostics
-</div>
-
-<h3>
-Artificial intelligence-enhanced near infrared spectroscopy for rapid diagnostics of infectious diseases
-</h3>
-
-<div class="publication-authors">
-Chamodi Premasinghe · Chloe Broeckelmann · Adam Kolobaric · Daniel Cozzolino · James Chapman
-</div>
-
-<div class="publication-journal">
-Applied Spectroscopy Reviews · 2026
-</div>
+<a
+class="button-secondary"
+href="https://openalex.org/authors/a5027681613"
+target="_blank"
+rel="noopener noreferrer">
+View OpenAlex ↗
+</a>
 
 </div>
 
-
-
-<div class="publication-card">
-
-<div class="publication-type">
-Circular Materials
+<div id="publication-status" class="publication-status">
+Loading publications...
 </div>
 
-<h3>
-Plastics and persistent chemical contaminants in food waste: challenges for the circular economy
-</h3>
-
-<div class="publication-authors">
-Adam Kolobaric · collaborators · James Chapman
-</div>
-
-<div class="publication-journal">
-Journal of Hazardous Materials Advances · 2026
-</div>
-
-</div>
-
-
-
-<div class="publication-card">
-
-<div class="publication-type">
-Portable Spectroscopy
-</div>
-
-<h3>
-Analysis of marine plastic fragments using a portable near-infrared instrument
-</h3>
-
-<div class="publication-authors">
-Adam Kolobaric · collaborators · James Chapman
-</div>
-
-<div class="publication-journal">
-Microchemical Journal · 2026
-</div>
-
-</div>
-
-
-
-<div class="publication-card in-preparation">
-
-<div class="publication-type">
-Current Manuscript · In Preparation
-</div>
-
-<h3>
-Medical plastic waste, analytical characterisation and circular-economy recovery
-</h3>
-
-<div class="publication-authors">
-Chloe Broeckelman and collaborators
-</div>
-
-<div class="publication-journal">
-Review article in preparation
-</div>
-
-</div>
-
-
-</div>
+<div id="publication-list"></div>
 
 </div>
 
 </section>
-
 
 
 <section class="collaboration" id="collaboration">
@@ -1791,7 +1703,6 @@ The group's research is deliberately interconnected. Researchers contribute
 across shared analytical platforms, publications and translational projects.
 </p>
 
-
 <div class="network-panel">
 
 <svg
@@ -1799,7 +1710,6 @@ class="network-svg"
 viewBox="0 0 1200 720"
 role="img"
 aria-label="Nanobioanalytical Lab collaboration network">
-
 
 <line class="line-strong" x1="600" y1="350" x2="330" y2="190"/>
 <line class="line-strong" x1="600" y1="350" x2="515" y2="135"/>
@@ -1824,215 +1734,100 @@ aria-label="Nanobioanalytical Lab collaboration network">
 <line class="line-theme" x1="600" y1="350" x2="1060" y2="600"/>
 <line class="line-theme" x1="600" y1="350" x2="145" y2="620"/>
 
-
 <circle class="node-main" cx="600" cy="350" r="82"/>
 
-<text class="node-text" x="600" y="342">
-James
-</text>
-
-<text class="node-text" x="600" y="363">
-Chapman
-</text>
-
-<text class="node-sub" x="600" y="390">
-Group Leader
-</text>
-
+<text class="node-text" x="600" y="342">James</text>
+<text class="node-text" x="600" y="363">Chapman</text>
+<text class="node-sub" x="600" y="390">Group Leader</text>
 
 <circle class="node-main" cx="925" cy="270" r="65"/>
 
-<text class="node-text" x="925" y="263">
-Abid
-</text>
-
-<text class="node-text" x="925" y="284">
-Farooq
-</text>
-
-<text class="node-sub" x="925" y="307">
-Postdoctoral Fellow
-</text>
-
+<text class="node-text" x="925" y="263">Abid</text>
+<text class="node-text" x="925" y="284">Farooq</text>
+<text class="node-sub" x="925" y="307">Postdoctoral Fellow</text>
 
 <circle class="node-main" cx="1040" cy="350" r="65"/>
 
-<text class="node-text" x="1040" y="343">
-Oanh
-</text>
-
-<text class="node-text" x="1040" y="364">
-Le
-</text>
-
-<text class="node-sub" x="1040" y="387">
-QBI Biomarkers
-</text>
-
+<text class="node-text" x="1040" y="343">Oanh</text>
+<text class="node-text" x="1040" y="364">Le</text>
+<text class="node-sub" x="1040" y="387">QBI Biomarkers</text>
 
 <circle class="node-person" cx="330" cy="190" r="58"/>
 
-<text class="node-text" x="330" y="187">
-Adam
-</text>
-
-<text class="node-sub" x="330" y="209">
-Microplastics
-</text>
-
+<text class="node-text" x="330" y="187">Adam</text>
+<text class="node-sub" x="330" y="209">Microplastics</text>
 
 <circle class="node-person" cx="515" cy="135" r="58"/>
 
-<text class="node-text" x="515" y="132">
-Chamodi
-</text>
-
-<text class="node-sub" x="515" y="154">
-Antimicrobials
-</text>
-
+<text class="node-text" x="515" y="132">Chamodi</text>
+<text class="node-sub" x="515" y="154">Antimicrobials</text>
 
 <circle class="node-person" cx="765" cy="165" r="58"/>
 
-<text class="node-text" x="765" y="162">
-Chloe
-</text>
-
-<text class="node-sub" x="765" y="184">
-Medical Plastics
-</text>
-
+<text class="node-text" x="765" y="162">Chloe</text>
+<text class="node-sub" x="765" y="184">Medical Plastics</text>
 
 <circle class="node-person" cx="935" cy="465" r="58"/>
 
-<text class="node-text" x="935" y="462">
-William
-</text>
-
-<text class="node-sub" x="935" y="484">
-Capstone · Beer Matrices
-</text>
-
+<text class="node-text" x="935" y="462">William</text>
+<text class="node-sub" x="935" y="484">Capstone · Beer Matrices</text>
 
 <circle class="node-person" cx="315" cy="455" r="55"/>
 
-<text class="node-text" x="315" y="452">
-Lauren
-</text>
-
-<text class="node-sub" x="315" y="474">
-Plastic Recyclates
-</text>
-
+<text class="node-text" x="315" y="452">Lauren</text>
+<text class="node-sub" x="315" y="474">Plastic Recyclates</text>
 
 <circle class="node-person" cx="475" cy="565" r="55"/>
 
-<text class="node-text" x="475" y="562">
-Brittany
-</text>
-
-<text class="node-sub" x="475" y="584">
-Biosensing
-</text>
-
+<text class="node-text" x="475" y="562">Brittany</text>
+<text class="node-sub" x="475" y="584">Biosensing</text>
 
 <circle class="node-person" cx="750" cy="565" r="55"/>
 
-<text class="node-text" x="750" y="562">
-Jacqulyn
-</text>
+<text class="node-text" x="750" y="562">Jacqulyn</text>
+<text class="node-sub" x="750" y="584">Forensics</text>
 
-<text class="node-sub" x="750" y="584">
-Forensics
-</text>
+<rect class="node-theme"
+x="35" y="260" rx="18"
+width="220" height="82"/>
 
+<text class="theme-text" x="145" y="293">AI-Enabled Rapid</text>
+<text class="theme-text" x="145" y="314">Diagnostics</text>
 
-<rect
-class="node-theme"
-x="35"
-y="260"
-rx="18"
-width="220"
-height="82"/>
+<rect class="node-theme"
+x="940" y="82" rx="18"
+width="220" height="88"/>
 
-<text class="theme-text" x="145" y="293">
-AI-Enabled Rapid
-</text>
+<text class="theme-text" x="1050" y="116">Circular Materials</text>
+<text class="theme-text" x="1050" y="137">&amp; Polymer Analytics</text>
 
-<text class="theme-text" x="145" y="314">
-Diagnostics
-</text>
+<rect class="node-theme"
+x="930" y="550" rx="18"
+width="260" height="96"/>
 
+<text class="theme-text" x="1060" y="583">Emerging Pharmaceuticals</text>
+<text class="theme-text" x="1060" y="604">Peptides &amp; Sports Integrity</text>
 
-<rect
-class="node-theme"
-x="940"
-y="82"
-rx="18"
-width="220"
-height="88"/>
+<rect class="node-theme"
+x="15" y="572" rx="18"
+width="260" height="96"/>
 
-<text class="theme-text" x="1050" y="116">
-Circular Materials
-</text>
-
-<text class="theme-text" x="1050" y="137">
-& Polymer Analytics
-</text>
-
-
-<rect
-class="node-theme"
-x="930"
-y="550"
-rx="18"
-width="260"
-height="96"/>
-
-<text class="theme-text" x="1060" y="583">
-Emerging Pharmaceuticals
-</text>
-
-<text class="theme-text" x="1060" y="604">
-Peptides & Sports Integrity
-</text>
-
-
-<rect
-class="node-theme"
-x="15"
-y="572"
-rx="18"
-width="260"
-height="96"/>
-
-<text class="theme-text" x="145" y="606">
-Functional Materials
-</text>
-
-<text class="theme-text" x="145" y="627">
-& Biointerface Engineering
-</text>
-
+<text class="theme-text" x="145" y="606">Functional Materials</text>
+<text class="theme-text" x="145" y="627">&amp; Biointerface Engineering</text>
 
 </svg>
 
-
 <p class="network-note">
-
 The network provides a high-level representation of selected publication,
 project and research-programme relationships within the group. It is intended
 to illustrate the interconnected nature of the research rather than provide
 a formal bibliometric analysis.
-
 </p>
 
 </div>
-
 </div>
 
 </section>
-
 
 
 <section class="funding" id="funding">
@@ -2040,7 +1835,7 @@ a formal bibliometric analysis.
 <div class="container">
 
 <div class="section-label">
-Funding, Partnerships & Research Networks
+Funding, Partnerships &amp; Research Networks
 </div>
 
 <h2>
@@ -2052,9 +1847,7 @@ Our research is strengthened through major collaborative programmes,
 institutional partnerships and professional scientific networks.
 </p>
 
-
 <div class="funding-grid">
-
 
 <div class="funding-card">
 
@@ -2071,7 +1864,6 @@ economy for plastics.
 </div>
 
 
-
 <div class="funding-card">
 
 <h3>
@@ -2084,7 +1876,6 @@ recycled feedstocks and next-generation materials.
 </p>
 
 </div>
-
 
 
 <div class="funding-card">
@@ -2101,7 +1892,6 @@ biosensing and biomedical applications.
 </div>
 
 
-
 <div class="funding-card">
 
 <h3>
@@ -2115,13 +1905,10 @@ materials chemistry and chemical measurement.
 
 </div>
 
-
 </div>
-
 </div>
 
 </section>
-
 
 
 <section class="approach">
@@ -2185,11 +1972,9 @@ chemical signals into evidence.
 </div>
 
 </div>
-
 </div>
 
 </section>
-
 
 
 <section class="join" id="join">
@@ -2211,50 +1996,63 @@ Research opportunities in The Chapman Group
 </h2>
 
 <p>
-We are currently accepting enquiries from students interested in joining The Chapman Group at Griffith University. Projects span analytical chemistry, spectroscopy, chemometrics, artificial intelligence, circular materials, pharmaceutical and biomarker analysis, antimicrobial materials and functional materials.
+We are currently accepting enquiries from students interested in joining
+The Chapman Group at Griffith University. Projects span analytical chemistry,
+spectroscopy, chemometrics, artificial intelligence, circular materials,
+pharmaceutical and biomarker analysis, antimicrobial materials and functional
+materials.
 </p>
 
 <div class="opportunity-grid">
 
 <div class="opportunity-card">
 <h3>Honours</h3>
-<p>Research-intensive projects for students seeking advanced laboratory, analytical and data-science experience.</p>
+<p>
+Research-intensive projects for students seeking advanced laboratory,
+analytical and data-science experience.
+</p>
 </div>
 
 <div class="opportunity-card">
 <h3>Capstone</h3>
-<p>Applied analytical projects connecting instrumental chemistry, real-world samples and quantitative interpretation.</p>
+<p>
+Applied analytical projects connecting instrumental chemistry,
+real-world samples and quantitative interpretation.
+</p>
 </div>
 
 <div class="opportunity-card">
 <h3>PhD</h3>
-<p>Higher-degree research opportunities across rapid diagnostics, AI-enabled spectroscopy, circular materials and bioanalytical science.</p>
+<p>
+Higher-degree research opportunities across rapid diagnostics,
+AI-enabled spectroscopy, circular materials and bioanalytical science.
+</p>
 </div>
 
 </div>
 
 <p>
-We also welcome enquiries from postdoctoral researchers, visiting scientists, academic collaborators and industry partners. Prospective students should email James with a short introduction, their area of interest and a current CV or academic transcript where available.
+We also welcome enquiries from postdoctoral researchers, visiting scientists,
+academic collaborators and industry partners. Prospective students should
+email James with a short introduction, their area of interest and a current
+CV or academic transcript where available.
 </p>
 
 <div class="buttons">
 
 <a
 class="button-primary"
-href="mailto:james.chapman@griffith.edu.au?subject=Research%20opportunity%20enquiry%20-%20The%20Chapman%20Group">
+href="mailto:james.chapman@griffith.edu.au?subject=Research opportunity enquiry - The Chapman Group">
 Enquire about joining
 </a>
 
-<a
-class="button-secondary"
-href="#research">
+#research
 Explore research programmes
 </a>
 
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -2263,13 +2061,11 @@ Explore research programmes
 </main>
 
 
-
 <footer>
 
 <div class="footer-inner">
 
 <div>
-
 <div class="footer-title">
 The Nanobioanalytical Lab
 </div>
@@ -2277,9 +2073,7 @@ The Nanobioanalytical Lab
 <div class="footer-text">
 The Chapman Group
 </div>
-
 </div>
-
 
 <div class="footer-text">
 
@@ -2296,6 +2090,303 @@ Analytical Chemistry · Griffith University · Australia
 </div>
 
 </footer>
+
+
+<script>
+
+async function loadPublications() {
+
+    const publicationList =
+        document.getElementById("publication-list");
+
+    const status =
+        document.getElementById("publication-status");
+
+    try {
+
+        const response = await fetch(
+            "publications.json?version=" + Date.now()
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not load publications.");
+        }
+
+        const data = await response.json();
+
+        const publications = data.publications || [];
+
+        if (publications.length === 0) {
+
+            status.textContent =
+                "No publications are currently available.";
+
+            return;
+        }
+
+
+        const publicationsByYear = {};
+
+        publications.forEach(publication => {
+
+            const year =
+                publication.year || "Other";
+
+            if (!publicationsByYear[year]) {
+                publicationsByYear[year] = [];
+            }
+
+            publicationsByYear[year].push(publication);
+
+        });
+
+
+        const years =
+            Object.keys(publicationsByYear)
+            .sort((a, b) => Number(b) - Number(a));
+
+
+        publicationList.innerHTML = "";
+
+
+        years.forEach(year => {
+
+            const yearBlock =
+                document.createElement("div");
+
+            yearBlock.className =
+                "publication-year-block";
+
+
+            const yearHeading =
+                document.createElement("div");
+
+            yearHeading.className =
+                "publication-year-heading";
+
+
+            const yearTitle =
+                document.createElement("h3");
+
+            yearTitle.textContent = year;
+
+
+            const yearCount =
+                document.createElement("div");
+
+            yearCount.className =
+                "publication-year-count";
+
+
+            const count =
+                publicationsByYear[year].length;
+
+
+            yearCount.textContent =
+                count +
+                (count === 1
+                    ? " publication"
+                    : " publications");
+
+
+            yearHeading.appendChild(yearTitle);
+            yearHeading.appendChild(yearCount);
+
+            yearBlock.appendChild(yearHeading);
+
+
+            const grid =
+                document.createElement("div");
+
+            grid.className =
+                "publication-grid";
+
+
+            publicationsByYear[year].forEach(publication => {
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "publication-card";
+
+
+                const type =
+                    document.createElement("div");
+
+                type.className =
+                    "publication-type";
+
+                type.textContent =
+                    publication.type_label ||
+                    "Publication";
+
+
+                const title =
+                    document.createElement("h3");
+
+                title.textContent =
+                    publication.title ||
+                    "Untitled publication";
+
+
+                const authors =
+                    document.createElement("div");
+
+                authors.className =
+                    "publication-authors";
+
+
+                const authorNames =
+                    publication.authors || [];
+
+
+                authorNames.forEach((author, index) => {
+
+                    if (author === "James Chapman") {
+
+                        const strong =
+                            document.createElement("strong");
+
+                        strong.textContent = author;
+
+                        authors.appendChild(strong);
+
+                    } else {
+
+                        authors.appendChild(
+                            document.createTextNode(author)
+                        );
+
+                    }
+
+
+                    if (index < authorNames.length - 1) {
+
+                        authors.appendChild(
+                            document.createTextNode(" · ")
+                        );
+
+                    }
+
+                });
+
+
+                const journal =
+                    document.createElement("div");
+
+                journal.className =
+                    "publication-journal";
+
+
+                const journalParts = [];
+
+
+                if (publication.journal) {
+                    journalParts.push(publication.journal);
+                }
+
+
+                if (publication.year) {
+                    journalParts.push(publication.year);
+                }
+
+
+                journal.textContent =
+                    journalParts.join(" · ");
+
+
+                card.appendChild(type);
+                card.appendChild(title);
+                card.appendChild(authors);
+                card.appendChild(journal);
+
+
+                if (publication.doi) {
+
+                    const link =
+                        document.createElement("a");
+
+                    link.className =
+                        "publication-link";
+
+                    link.href =
+                        "https://doi.org/" +
+                        publication.doi;
+
+                    link.target =
+                        "_blank";
+
+                    link.rel =
+                        "noopener noreferrer";
+
+                    link.textContent =
+                        "View publication ↗";
+
+                    card.appendChild(link);
+
+                }
+
+
+                if (
+                    publication.citations !== undefined &&
+                    publication.citations > 0
+                ) {
+
+                    const citations =
+                        document.createElement("span");
+
+                    citations.className =
+                        "publication-citations";
+
+                    citations.textContent =
+                        publication.citations +
+                        (publication.citations === 1
+                            ? " citation"
+                            : " citations");
+
+                    card.appendChild(citations);
+
+                }
+
+
+                grid.appendChild(card);
+
+            });
+
+
+            yearBlock.appendChild(grid);
+
+            publicationList.appendChild(yearBlock);
+
+        });
+
+
+        status.textContent =
+            data.publication_count +
+            " publications shown · automatically updated";
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        status.textContent = "";
+
+        publicationList.innerHTML =
+            '<div class="publication-error">' +
+            'Publication information is temporarily unavailable. ' +
+            'Please view the Google Scholar profile above.' +
+            '</div>';
+
+    }
+
+}
+
+
+loadPublications();
+
+</script>
 
 
 </body>
