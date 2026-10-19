@@ -2,16 +2,37 @@
   "author": "James Chapman",
   "openalex_author_id": "A5027681613",
   "google_scholar": "https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&hl=en",
-  "last_updated": "2026-10-12T08:27:24.686231+00:00",
-  "publication_count": 32,
+  "last_updated": "2026-10-19T07:11:10.481669+00:00",
+  "publication_count": 37,
   "publications_by_year": {
-    "2026": 3,
-    "2025": 4,
+    "2026": 5,
+    "2025": 7,
     "2024": 6,
     "2023": 4,
     "2022": 15
   },
   "publications": [
+    {
+      "title": "Peatland Degradation Alters the Microbial–carbon–water Table Interactions that Regulate Carbon Storage",
+      "authors": [
+        "Anne Yusuf",
+        "C. Krohn",
+        "Christina Birnbaum",
+        "Kyle Hearn",
+        "Sarah Treby",
+        "Andrew S. Ball",
+        "James Chapman",
+        "Samantha Grover"
+      ],
+      "journal": "Microbial Ecology",
+      "year": 2026,
+      "publication_date": "2026-10-09",
+      "doi": "10.1007/s00248-026-02891-3",
+      "type": "article",
+      "type_label": "Journal Article",
+      "citations": 0,
+      "openalex": "https://openalex.org/W7221176050"
+    },
     {
       "title": "Plastics and associated chemical contaminants in black soldier fly larvae food waste bioconversion",
       "authors": [
@@ -28,6 +49,23 @@
       "type_label": "Journal Article",
       "citations": 0,
       "openalex": "https://openalex.org/W7213353130"
+    },
+    {
+      "title": "Analysis of marine plastic fragments using a portable near-infrared instrument: The effect of scanning position on the classification of polymer type",
+      "authors": [
+        "Adam Kolobaric",
+        "Louwrens Christiaan Hoffman",
+        "James Chapman",
+        "Daniel Cozzolino"
+      ],
+      "journal": "Microchemical Journal",
+      "year": 2026,
+      "publication_date": "2026-05-08",
+      "doi": "10.1016/j.microc.2026.118322",
+      "type": "article",
+      "type_label": "Journal Article",
+      "citations": 0,
+      "openalex": "https://openalex.org/W7160600674"
     },
     {
       "title": "An exploratory study on the use of near infrared spectroscopy to analyse the addition of different polymers and the concentration of PET to black soldier fly larvae",
@@ -91,6 +129,43 @@
       "openalex": "https://openalex.org/W7117761312"
     },
     {
+      "title": "Comparison of Benchtop and Portable Near-Infrared Instruments to Predict the Type of Microplastic Added to High-Moisture Food Samples",
+      "authors": [
+        "Adam Kolobaric",
+        "Shanmugam Alagappan",
+        "Jana Čaloudová",
+        "Louwrens Christiaan Hoffman",
+        "James Chapman",
+        "Daniel Cozzolino"
+      ],
+      "journal": "Sensors",
+      "year": 2025,
+      "publication_date": "2025-12-29",
+      "doi": "10.3390/s26010210",
+      "type": "article",
+      "type_label": "Journal Article",
+      "citations": 1,
+      "openalex": "https://openalex.org/W7117659295"
+    },
+    {
+      "title": "Artificial intelligence–enhanced near infrared (NIR) spectroscopy for rapid diagnostics of infectious diseases",
+      "authors": [
+        "Chamodi Premasinghe",
+        "Chloe Broeckelmann",
+        "Adam Kolobaric",
+        "Daniel Cozzolino",
+        "James Chapman"
+      ],
+      "journal": "Applied Spectroscopy Reviews",
+      "year": 2025,
+      "publication_date": "2025-12-02",
+      "doi": "10.1080/05704928.2025.2570816",
+      "type": "article",
+      "type_label": "Journal Article",
+      "citations": 6,
+      "openalex": "https://openalex.org/W4416920740"
+    },
+    {
       "title": "Effect of sample presentation on the identification of polypropylene (PP), polyethylene terephthalate (PET), and polystyrene (PS) using a portable near infrared instrument",
       "authors": [
         "Adam Kolobaric",
@@ -106,6 +181,22 @@
       "type_label": "Journal Article",
       "citations": 2,
       "openalex": "https://openalex.org/W4416191303"
+    },
+    {
+      "title": "Big Data in Food Safety and Security Applications and Examples in Food Authenticity, Adulteration, and Fraud",
+      "authors": [
+        "James Chapman",
+        "Louwrens Christiaan Hoffman",
+        "Daniel Cozzolino"
+      ],
+      "journal": "Royal Society of Chemistry eBooks",
+      "year": 2025,
+      "publication_date": "2025-06-27",
+      "doi": "10.1039/9781837679119-00070",
+      "type": "book-chapter",
+      "type_label": "Book Chapter",
+      "citations": 1,
+      "openalex": "https://openalex.org/W4411708342"
     },
     {
       "title": "Atomic layer deposition of antibacterial ZnO ultrathin films over SBA-15",
@@ -232,7 +323,7 @@
       "doi": "10.1016/j.scitotenv.2024.170013",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 48,
+      "citations": 49,
       "openalex": "https://openalex.org/W4391056241"
     },
     {
@@ -404,7 +495,7 @@
       "doi": "10.1016/j.infrared.2022.104422",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 17,
+      "citations": 16,
       "openalex": "https://openalex.org/W4307647358"
     },
     {
@@ -430,7 +521,7 @@
       "doi": "10.1016/j.jcis.2022.08.052",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 30,
+      "citations": 29,
       "openalex": "https://openalex.org/W4292162380"
     },
     {
@@ -491,7 +582,7 @@
       "doi": "10.1021/acsami.2c03695",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 58,
+      "citations": 57,
       "openalex": "https://openalex.org/W4223483708"
     },
     {
@@ -586,7 +677,7 @@
       "doi": "10.1002/admi.202102113",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 37,
+      "citations": 39,
       "openalex": "https://openalex.org/W4210812326"
     },
     {
