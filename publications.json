@@ -2,7 +2,7 @@
   "author": "James Chapman",
   "openalex_author_id": "A5027681613",
   "google_scholar": "https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&hl=en",
-  "last_updated": "2026-10-19T07:11:10.481669+00:00",
+  "last_updated": "2026-10-26T07:17:09.914236+00:00",
   "publication_count": 37,
   "publications_by_year": {
     "2026": 5,
@@ -271,7 +271,7 @@
       "doi": "10.1111/ijfs.17364",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 25,
+      "citations": 26,
       "openalex": "https://openalex.org/W4401045574"
     },
     {
