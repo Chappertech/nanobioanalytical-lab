@@ -2,7 +2,7 @@
   "author": "James Chapman",
   "openalex_author_id": "A5027681613",
   "google_scholar": "https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&hl=en",
-  "last_updated": "2026-10-26T07:17:09.914236+00:00",
+  "last_updated": "2026-11-02T08:42:39.227553+00:00",
   "publication_count": 37,
   "publications_by_year": {
     "2026": 5,
@@ -144,7 +144,7 @@
       "doi": "10.3390/s26010210",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 1,
+      "citations": 2,
       "openalex": "https://openalex.org/W7117659295"
     },
     {
@@ -179,7 +179,7 @@
       "doi": "10.1016/j.saa.2025.127190",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 2,
+      "citations": 3,
       "openalex": "https://openalex.org/W4416191303"
     },
     {
@@ -321,9 +321,9 @@
       "year": 2024,
       "publication_date": "2024-01-20",
       "doi": "10.1016/j.scitotenv.2024.170013",
-      "type": "article",
-      "type_label": "Journal Article",
-      "citations": 49,
+      "type": "review",
+      "type_label": "Review Article",
+      "citations": 50,
       "openalex": "https://openalex.org/W4391056241"
     },
     {
@@ -408,8 +408,8 @@
       "year": 2023,
       "publication_date": "2023-08-05",
       "doi": "10.1007/s00216-023-04849-7",
-      "type": "article",
-      "type_label": "Journal Article",
+      "type": "review",
+      "type_label": "Review Article",
       "citations": 15,
       "openalex": "https://openalex.org/W4385607096"
     },
@@ -426,8 +426,8 @@
       "year": 2023,
       "publication_date": "2023-04-13",
       "doi": "10.1080/10408347.2023.2199864",
-      "type": "article",
-      "type_label": "Journal Article",
+      "type": "review",
+      "type_label": "Review Article",
       "citations": 50,
       "openalex": "https://openalex.org/W4365443440"
     },
