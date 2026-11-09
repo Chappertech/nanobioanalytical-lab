@@ -2,7 +2,7 @@
   "author": "James Chapman",
   "openalex_author_id": "A5027681613",
   "google_scholar": "https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&hl=en",
-  "last_updated": "2026-11-02T08:42:39.227553+00:00",
+  "last_updated": "2026-11-09T08:55:40.237205+00:00",
   "publication_count": 37,
   "publications_by_year": {
     "2026": 5,
@@ -231,7 +231,7 @@
       "doi": "10.1093/ijfood/vvaf012",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 3,
+      "citations": 4,
       "openalex": "https://openalex.org/W4406328366"
     },
     {
@@ -271,7 +271,7 @@
       "doi": "10.1111/ijfs.17364",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 26,
+      "citations": 30,
       "openalex": "https://openalex.org/W4401045574"
     },
     {
@@ -290,7 +290,7 @@
       "doi": "10.1111/ejss.13518",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 5,
+      "citations": 7,
       "openalex": "https://openalex.org/W4400056987"
     },
     {
@@ -323,7 +323,7 @@
       "doi": "10.1016/j.scitotenv.2024.170013",
       "type": "review",
       "type_label": "Review Article",
-      "citations": 50,
+      "citations": 53,
       "openalex": "https://openalex.org/W4391056241"
     },
     {
@@ -395,7 +395,7 @@
       "doi": "10.3390/s23218969",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 3,
+      "citations": 4,
       "openalex": "https://openalex.org/W4388333589"
     },
     {
@@ -428,7 +428,7 @@
       "doi": "10.1080/10408347.2023.2199864",
       "type": "review",
       "type_label": "Review Article",
-      "citations": 50,
+      "citations": 53,
       "openalex": "https://openalex.org/W4365443440"
     },
     {
@@ -455,7 +455,7 @@
       "doi": "10.1016/j.mtchem.2022.101242",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 26,
+      "citations": 28,
       "openalex": "https://openalex.org/W4310857076"
     },
     {
@@ -521,7 +521,7 @@
       "doi": "10.1016/j.jcis.2022.08.052",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 29,
+      "citations": 30,
       "openalex": "https://openalex.org/W4292162380"
     },
     {
@@ -543,7 +543,7 @@
       "doi": "10.1021/acsami.2c05165",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 23,
+      "citations": 27,
       "openalex": "https://openalex.org/W4285800121"
     },
     {
@@ -561,7 +561,7 @@
       "doi": "10.1016/j.cobme.2022.100399",
       "type": "review",
       "type_label": "Review Article",
-      "citations": 20,
+      "citations": 21,
       "openalex": "https://openalex.org/W4281250971"
     },
     {
@@ -582,7 +582,7 @@
       "doi": "10.1021/acsami.2c03695",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 57,
+      "citations": 59,
       "openalex": "https://openalex.org/W4223483708"
     },
     {
@@ -604,7 +604,7 @@
       "doi": "10.1007/s40735-022-00648-2",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 32,
+      "citations": 34,
       "openalex": "https://openalex.org/W4220744323"
     },
     {
@@ -677,7 +677,7 @@
       "doi": "10.1002/admi.202102113",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 39,
+      "citations": 40,
       "openalex": "https://openalex.org/W4210812326"
     },
     {
@@ -696,7 +696,7 @@
       "doi": "10.1039/d2va00059h",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 24,
+      "citations": 25,
       "openalex": "https://openalex.org/W4285294309"
     },
     {
