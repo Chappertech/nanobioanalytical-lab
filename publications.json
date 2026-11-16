@@ -2,7 +2,7 @@
   "author": "James Chapman",
   "openalex_author_id": "A5027681613",
   "google_scholar": "https://scholar.google.com.au/citations?user=3I7cP7YAAAAJ&hl=en",
-  "last_updated": "2026-11-09T08:55:40.237205+00:00",
+  "last_updated": "2026-11-16T08:52:33.928500+00:00",
   "publication_count": 37,
   "publications_by_year": {
     "2026": 5,
@@ -162,7 +162,7 @@
       "doi": "10.1080/05704928.2025.2570816",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 6,
+      "citations": 7,
       "openalex": "https://openalex.org/W4416920740"
     },
     {
@@ -179,7 +179,7 @@
       "doi": "10.1016/j.saa.2025.127190",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 3,
+      "citations": 4,
       "openalex": "https://openalex.org/W4416191303"
     },
     {
@@ -214,7 +214,7 @@
       "doi": "10.1016/j.mtchem.2025.102566",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 2,
+      "citations": 1,
       "openalex": "https://openalex.org/W4407280493"
     },
     {
@@ -252,7 +252,7 @@
       "doi": "10.3390/molecules29245966",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 11,
+      "citations": 13,
       "openalex": "https://openalex.org/W4405535444"
     },
     {
@@ -271,7 +271,7 @@
       "doi": "10.1111/ijfs.17364",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 30,
+      "citations": 33,
       "openalex": "https://openalex.org/W4401045574"
     },
     {
@@ -290,7 +290,7 @@
       "doi": "10.1111/ejss.13518",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 7,
+      "citations": 8,
       "openalex": "https://openalex.org/W4400056987"
     },
     {
@@ -323,7 +323,7 @@
       "doi": "10.1016/j.scitotenv.2024.170013",
       "type": "review",
       "type_label": "Review Article",
-      "citations": 53,
+      "citations": 54,
       "openalex": "https://openalex.org/W4391056241"
     },
     {
@@ -410,7 +410,7 @@
       "doi": "10.1007/s00216-023-04849-7",
       "type": "review",
       "type_label": "Review Article",
-      "citations": 15,
+      "citations": 18,
       "openalex": "https://openalex.org/W4385607096"
     },
     {
@@ -582,7 +582,7 @@
       "doi": "10.1021/acsami.2c03695",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 59,
+      "citations": 60,
       "openalex": "https://openalex.org/W4223483708"
     },
     {
@@ -604,7 +604,7 @@
       "doi": "10.1007/s40735-022-00648-2",
       "type": "article",
       "type_label": "Journal Article",
-      "citations": 34,
+      "citations": 35,
       "openalex": "https://openalex.org/W4220744323"
     },
     {
